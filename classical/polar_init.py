@@ -9,7 +9,7 @@ def polar_nd_init(dim, radius):
     U = np.random.uniform(0., 1.)
     R = radius*U**(1./dim)
     if dim > 2:
-        phis = np.random.uniform(0., np.pi, dim-2)
+        phis = np.random.uniform(0., np.pi, int(dim)-2)
         theta = np.random.uniform(0., 2*np.pi)
         coord = [np.cos(phis[0])]
         i = 1

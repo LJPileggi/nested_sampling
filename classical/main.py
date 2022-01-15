@@ -19,7 +19,7 @@ def main():
     parser.add_argument('--n_points', metavar='n_points', type=int, dest='n_points', help='sets \# points for simulation.')
     parser.add_argument('--dim', metavar='dim', type=int, dest='dim', help='dimension of the explored space.')
     parser.add_argument('--prior_range', metavar='prior_range', type=float, dest='prior_range', help='sets radius of the explored domain.')
-    parser.add_argument('--MC_step', metavar='MC_step', type= float, dest='MC_step', help='sets step for MC evolution w.r.t. dimension of the space.\nNumbers <0.01 recommended.')
+    parser.add_argument('--MC_step', metavar='MC_step', type=float, dest='MC_step', help='sets step for MC evolution w.r.t. dimension of the space.\nNumbers <0.01 recommended.')
     parser.add_argument('--stoch_prior', dest='X_stoch', help='finds new values for prior mass stochastically;\ndefault: takes them according to exp(-i/N).')
     parser.add_argument('--trapezoid', dest='trapezoid', help='sets new weight using trapezoidal rule;\ndefault: takes difference btw consecutive X values.')
     parser.add_argument('--seed', metavar='seed', type=int, dest='seed', help='sets seed for simulation.')
@@ -28,7 +28,7 @@ def main():
     parser.set_defaults(X_stoch=False)
     parser.set_defaults(trapezoid=False)
     parser.set_defaults(seed=1)
-    parser.set_defaults(n_runs=18)
+    parser.set_defaults(n_runs=12)
     args = parser.parse_args()
 
     params = [(

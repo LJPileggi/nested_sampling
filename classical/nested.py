@@ -88,8 +88,8 @@ class nested():
 def nested_loop(N_iter, seed, *args):
     np.random.seed(seed)
     init_time_start = time.time()
-    trial = polar_nd_init(args[2], args[3])
-    init_time = (time.time() - init_time_start)*args[1]
+    trial = polar_nd_init(args[1], args[2])
+    init_time = (time.time() - init_time_start)*args[0]
     if init_time >= 3600.:
         print(f'Initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
     elif init_time >= 60.:
