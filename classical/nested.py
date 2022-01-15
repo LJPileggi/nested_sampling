@@ -73,7 +73,7 @@ class nested():
         idx_new = random.choice(range(self._n_points))
         while idx_new == self.worst_idx:
             idx_new = random.choice(range(self._n_points))
-        new_point = self.points[idx_new]
+        new_point = point(self.points[idx_new].theta, self.points[idx_new].likelihood)
         new_point.MC_evolution(gauss, self.worst_L, self._dim, np.sqrt(-2.*np.log(self.worst_L))*self._MC_step)
         self.points[self.worst_idx] = new_point
 
