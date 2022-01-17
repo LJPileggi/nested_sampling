@@ -27,9 +27,9 @@ def level_switch(current_level, L_level, count_j, count_j_1, n_j, n_j_1, it, it_
     w = np.random.uniform(0., 1.)
     enforce = ((count_j_1 + C1)*(level_count(current_level, len(L_level)-1, it, it_unif) + C1)/(count_j + C1)/(level_count(current_level-1, len(L_level)-1, it, it_unif) + C1))**beta
     if level_build:
-        ratio = level_weight(current_level-1, len(L_level)-1, lam=lam)/level_weight(current_level, len(L_level)-1, lam=lam) * (n_j_1+C)/(n_j+C*np.e)*enforce#**-1
+        ratio = level_weight(current_level-1, len(L_level)-1, lam=lam)/level_weight(current_level, len(L_level)-1, lam=lam) * (n_j_1+C*(1-np.e**-1))/(n_j+C)*enforce#**-1
     else:
-        ratio = (n_j_1+C)/(n_j+C*np.e)*enforce#**-1
+        ratio = (n_j_1+C*(1-np.e**-1))/(n_j+C)*enforce#**-1
     if w > ratio:
         return True#, ratio
     else:
