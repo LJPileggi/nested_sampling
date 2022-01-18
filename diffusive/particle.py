@@ -21,7 +21,7 @@ def proposal(x_t, len_step, dim):
     return x_t1
 
 class particle():
-    def __init__(self, likelihood, dim, prior_range, params):
+    def __init__(self, likelihood, dim, prior_range, params, no_search):
         self.theta = polar_nd_init(dim, prior_range)
         self.likelihood = likelihood(self.theta)
         self.current = 0
@@ -42,6 +42,7 @@ class particle():
         self._unif_iter = 0
         self._level_visits_old = []
         self._creating = True
+        self._no_search = no_search
 
     def weighting(self, level):
         return np.exp((level-len(self.L_levels)+1)/self._params.lam)
@@ -125,12 +126,13 @@ class particle():
         #print(self._L_buffer)
         self.level_visits.append(1)
         time_left = (time.time()-start)*(self._params.max_level-new_level)
-        if time_left >= 3600.:
-            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
-        elif time_left >= 60.:
-            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
-        else:
-            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
+        if self._no_search:
+            if time_left >= 3600.:
+                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+            elif time_left >= 60.:
+                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
+            else:
+                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
 
 
     def create_all_levels(self):
@@ -156,7 +158,7 @@ class particle():
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
                 time_left = (time.time()-start)*(self._params.max_recorded_points*self._params.record_step - self.iter)
-                if self.iter//self._params.record_step%100 == 0:
+                if (self.iter//self._params.record_step%100 == 0) & self._no_search:
                     if time_left >= 3600.:
                         print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
@@ -185,15 +187,17 @@ class particle():
             self.evidence.append(self.evidence[-1] + like*self.prior_mass[-1])
             j += 1
 
-def diffusive_loop(seed, likelihood, dim, prior_range, params):
+def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search):
+    start = time.time()
     np.random.seed(seed)
     params = SimpleNamespace(**params)
-    part = particle(likelihood, dim, prior_range, params)
+    part = particle(likelihood, dim, prior_range, params, no_search)
     part.create_all_levels()
     part.explore_levels()
     part.find_evidence()
-    print(f'process {os.getpid()}; simulation completed.')
-    #params = namedtuple("params", params.keys())(*params.values())
+    print(f'process {os.getpid()}; simulation completed. \#points per level: {params.L_per_level};')
+    print(f'lambda: {params.lam}; beta: {params.beta};')
+    print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {time.time()-start}\n')
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)

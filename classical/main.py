@@ -24,22 +24,46 @@ def main():
     parser.add_argument('--trapezoid', dest='trapezoid', help='sets new weight using trapezoidal rule;\ndefault: takes difference btw consecutive X values.')
     parser.add_argument('--seed', metavar='seed', type=int, dest='seed', help='sets seed for simulation.')
     parser.add_argument('--n_runs', dest='n_runs', type=int, help='\#parallel runs of the simulation;\ndefault: 12.')
+    parser.add_argument('--automatised', metavar='automatised', type=bool, dest='automatised', help='runs automatically the algorithm over several configurations of \#points.')
+    parser.set_defaults(N_iter=20000)
+    parser.set_defaults(n_points=100)
+    parser.set_defaults(dim=50)
+    parser.set_defaults(prior_range=30.)
     parser.set_defaults(MC_step=0.005)
     parser.set_defaults(X_stoch=False)
     parser.set_defaults(trapezoid=False)
     parser.set_defaults(seed=1)
     parser.set_defaults(n_runs=12)
+    parser.set_defaults(automatised=False)
     args = parser.parse_args()
 
-    params = [(
-    args.N_iter,
-    args.seed+i,
-    args.n_points,
-    args.dim,
-    args.prior_range,
-    args.MC_step,
-    args.X_stoch,
-    args.trapezoid) for i in range(args.n_runs)]
+    if not args.automatised:
+        params = [(
+        args.N_iter,
+        args.seed+i,
+        args.n_points,
+        args.dim,
+        args.prior_range,
+        args.MC_step,
+        args.X_stoch,
+        args.trapezoid,
+        args.automatised) for i in range(args.n_runs)]
+    else:
+        N_points = [5, 10, 20, 35, 50, 75, 100,
+        200, 350, 500, 750, 1000, 2000, 3500]
+        N_iter = list(200*np.array(N_points))
+        params = [(
+        n_iter,
+        args.seed+i,
+        n_points,
+        args.dim,
+        args.prior_range,
+        args.MC_step,
+        args.X_stoch,
+        args.trapezoid,
+        args.automatised)
+        for n_iter, n_points in zip(N_iter, N_points)
+        for i in range(args.n_runs)]
     with Pool() as pool:
         try:
             results = pool.starmap(nested_loop, params)
@@ -47,6 +71,3 @@ def main():
             pool.terminate()
             print("forced termination")
             exit()
-    for result in results:
-        print(f'total n. of iterations: {len(result.weights)}; last prior mass value recorded: {result.prior_mass[-1]};')
-        print(f'value of evidence obtained: {result.evidence[-1]}; last likelihood value: {result.worst_L}.\n')

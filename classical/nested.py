@@ -91,13 +91,14 @@ def nested_loop(N_iter, seed, *args):
     init_time_start = time.time()
     trial = polar_nd_init(args[1], args[2])
     init_time = (time.time() - init_time_start)*args[0]
-    if init_time >= 3600.:
-        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
-    elif init_time >= 60.:
-        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
-    else:
-        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time%60:.0f} s.')
-    nest = nested(*args)
+    if not args[-1]:
+        if init_time >= 3600.:
+            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
+        elif init_time >= 60.:
+            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
+        else:
+            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time%60:.0f} s.')
+    nest = nested(*args[:-1])
     i = 1
     while i<N_iter:
         start = time.time()
@@ -105,7 +106,7 @@ def nested_loop(N_iter, seed, *args):
         nest.update_quantities(i)
         nest.substitute_worst()
         left = (time.time()-start)*(N_iter-i)
-        if i%100 == 0:
+        if (i%100 == 0) & (not args[-1]):
             if left >= 3600.:
                 print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//3600} h {left//60%60:.0f} m {left%60:.0f} s.')
             elif left >= 60.:
@@ -116,7 +117,9 @@ def nested_loop(N_iter, seed, *args):
         if 1. - nest.evidence[-2]/nest.evidence[-1] < 0.00001:
             break
     nest.final_step(i)
-    print(f'process {os.getpid()}; simulation completed.')
+    print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {time.time()-init_time_start}')
+    print(f'process {os.getpid()}; \#iterations: {len(nest.weights)}; last prior mass: {nest.prior_mass[-1]};')
+    print(f'process {os.getpid()}; evidence: {nest.evidence[-1]}; last likelihood value: {nest.worst_L}.\n')
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
