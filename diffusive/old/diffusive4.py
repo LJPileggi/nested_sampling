@@ -136,11 +136,11 @@ def diffusive(dim, levels, prior_range, N_level, N_iter, N_max, MC_step, C, C1, 
     for i in range(1, len(n_tot)):
         X_swaths.append((n_tot[i][1]/(n_tot[i][0]+n_tot[i][1]))*X_swaths[-1])
     X_swaths.append(X_swaths[-1]*np.e**-1)
-    print(X_swaths)
-    print(L_level)
+    #print(X_swaths)
+    #print(L_level)
     #print(len(n_tot))
     #print(len(L_level))
-    print(level_visits)
+    #print(level_visits)
     level_visits_old = level_visits
     level_visits = list(np.ones(levels+1))
     while n_lk < N_iter:
@@ -170,7 +170,7 @@ def diffusive(dim, levels, prior_range, N_level, N_iter, N_max, MC_step, C, C1, 
     var_ratios -= mean_ratios**2
     dev_ratios = var_ratios**0.5
     #print(f'{mean_ratios} +- {var_ratios**0.5}')
-    print(X_ratios)
+    #print(X_ratios)
     ratio_hist, bin_hist = np.histogram(X_ratios, 10)
     bin_hist = [(bin_hist[i]+bin_hist[i-1])/2 for i in range(1, len(bin_hist))]
     #plt.plot(bin_hist, ratio_hist, linestyle='', marker='*', color='black')
@@ -199,7 +199,7 @@ def diffusive(dim, levels, prior_range, N_level, N_iter, N_max, MC_step, C, C1, 
     return X, Z, level_record
 
 if __name__ == '__main__':
-    n_lev = [2000]
+    n_lev = [5000]
     n_it = [15000]
     MC = [0.005]
     C = [500]
