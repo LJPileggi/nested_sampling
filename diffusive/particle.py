@@ -58,9 +58,9 @@ class particle():
         w = np.random.uniform(0., 1.)
         enforce = (self.level_visits[level-1] + self._params.C1)*(self.expected_visits(level) + self._params.C1)/(self.level_visits[level] + self._params.C1)/(self.expected_visits(level-1) + self._params.C1)
         if self._creating:
-            ratio = self.weighting(level-1)/self.weighting(level)*(self.relative_visits[level-1][1]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][0]+self._params.C1)*enforce**self._params.beta
+            ratio = self.weighting(level-1)/self.weighting(level)*(self.relative_visits[level-1][0]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][1]+self._params.C1)*enforce**self._params.beta
         else:
-            ratio = (self.relative_visits[level-1][1]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][0]+self._params.C1)*enforce**self._params.beta
+            ratio = (self.relative_visits[level-1][0]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][1]+self._params.C1)*enforce**self._params.beta#(1.-self._params.quantile)*enforce**self._params.beta
         #print(ratio)
         if w > ratio:
             return True
@@ -114,7 +114,7 @@ class particle():
             if self.iter%self._params.record_step == 0:
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
-                print(f'Creating level {new_level}; L_{new_level}: {self.L_levels[-1]}; currently at {self.likelihood}')
+                #print(f'Creating level {new_level}; L_{new_level}: {self.L_levels[-1]}; currently at {self.likelihood}')
         self._L_buffer.sort()
         quant = floor(len(self._L_buffer)*(1-self._params.quantile))-1
         self.L_levels.append(self._L_buffer[quant])
@@ -130,7 +130,7 @@ class particle():
         elif time_left >= 60.:
             print(f'Created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
         else:
-            print(f'Created level {new_level}. Expected time to finish creating levels: {time_left:.0f} s.')
+            print(f'Created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
 
 
     def create_all_levels(self):
@@ -156,12 +156,13 @@ class particle():
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
                 time_left = (time.time()-start)*(self._params.max_recorded_points*self._params.record_step - self.iter)
-                if time_left >= 3600.:
-                    print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
-                elif time_left >= 60.:
-                    print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
-                else:
-                    print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.0f} s.')    
+                if self.iter//self._params.record_step%100 == 0:
+                    if time_left >= 3600.:
+                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                    elif time_left >= 60.:
+                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
+                    else:
+                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
 
     def find_evidence(self):
@@ -170,8 +171,6 @@ class particle():
         for i in range(1, len(self.relative_visits)):
             self._swaths.append(self._swaths[-1]*self.relative_visits[i][1]/(self.relative_visits[i][1]+self.relative_visits[i][0]))
         self._swaths.append(self._swaths[-1]*self._params.quantile)
-        print(len(self._swaths))
-        print(len(self.L_levels)-1)
         for like in self.L_record:
             i, j = 0, 0
             while (i < len(self.L_levels)-1) & (like > self.L_levels[i]):
@@ -191,7 +190,6 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params):
     params = SimpleNamespace(**params)
     part = particle(likelihood, dim, prior_range, params)
     part.create_all_levels()
-    print(part.level_visits)
     part.explore_levels()
     part.find_evidence()
     print('Simulation completed.')
@@ -199,7 +197,7 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params):
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile}.csv')
+    out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile:.4f}.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['iteration', 'level', 'prior mass', 'likelihood', 'evidence'])
