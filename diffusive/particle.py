@@ -126,11 +126,11 @@ class particle():
         self.level_visits.append(1)
         time_left = (time.time()-start)*(self._params.max_level-new_level)
         if time_left >= 3600.:
-            print(f'Created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
         elif time_left >= 60.:
-            print(f'Created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
+            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
         else:
-            print(f'Created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
+            print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
 
 
     def create_all_levels(self):
@@ -158,11 +158,11 @@ class particle():
                 time_left = (time.time()-start)*(self._params.max_recorded_points*self._params.record_step - self.iter)
                 if self.iter//self._params.record_step%100 == 0:
                     if time_left >= 3600.:
-                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
-                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
                     else:
-                        print(f'{self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
+                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
 
     def find_evidence(self):
@@ -192,7 +192,7 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params):
     part.create_all_levels()
     part.explore_levels()
     part.find_evidence()
-    print('Simulation completed.')
+    print(f'process {os.getpid()}; simulation completed.')
     #params = namedtuple("params", params.keys())(*params.values())
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
@@ -200,6 +200,8 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params):
     out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile:.4f}.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
+        writer.writerow(['max_level', 'L_per_level', 'max_points', 'C1', 'lam', 'beta', 'quantile'])
+        writer.writerow([params.max_level, params.L_per_level, params.max_recorded_points, params.C1, params.lam, params.beta, params.quantile])
         writer.writerow(['iteration', 'level', 'prior mass', 'likelihood', 'evidence'])
         j = 0
         for x, y, z, t in zip(part.level_record, part.prior_mass, part.L_record, part.evidence):

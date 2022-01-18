@@ -57,6 +57,7 @@ class nested():
                 worst, L_w = i, self.points[i].likelihood
             i += 1
         self.worst_idx, self.worst_L = worst, L_w
+        self.worst_L_series.append(self.worst_L)
 
     def update_quantities(self, iter_step):
         if not self._X_stoch:
@@ -91,11 +92,11 @@ def nested_loop(N_iter, seed, *args):
     trial = polar_nd_init(args[1], args[2])
     init_time = (time.time() - init_time_start)*args[0]
     if init_time >= 3600.:
-        print(f'Initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
+        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
     elif init_time >= 60.:
-        print(f'Initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
+        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
     else:
-        print(f'Initialising particles. Expected time for initialisation: {init_time%60:.0f} s.')
+        print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time%60:.0f} s.')
     nest = nested(*args)
     i = 1
     while i<N_iter:
@@ -106,26 +107,27 @@ def nested_loop(N_iter, seed, *args):
         left = (time.time()-start)*(N_iter-i)
         if i%100 == 0:
             if left >= 3600.:
-                print(f'iteration n. {i}; expected time left: {left//3600} h {left//60%60:.0f} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//3600} h {left//60%60:.0f} m {left%60:.0f} s.')
             elif left >= 60.:
-                print(f'iteration n. {i}; expected time left: {left//60} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//60} m {left%60:.0f} s.')
             else:
-                print(f'iteration n. {i}; expected time left: {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left%60:.0f} s.')
         i += 1
         if 1. - nest.evidence[-2]/nest.evidence[-1] < 0.00001:
             break
     nest.final_step(i)
-    print('simulation completed.')
+    print(f'process {os.getpid()}; simulation completed.')
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     out = os.path.join(output_path, f'data_{seed}_{args[0]}_{N_iter}.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
-        writer.writerow(['iteration', 'prior mass', 'evidence'])
+        writer.writerow(['n_iterations', 'n_points', 'stoch_prior', 'trapezoid'])
+        writer.writerow([N_iter, args[0], args[4], args[5]])
+        writer.writerow(['iteration', 'prior mass', 'worst L', 'evidence'])
         j = 0
-        for x, z in zip(nest.prior_mass, nest.evidence):
-            writer.writerow([j, x, z])
+        for x, y, z in zip(nest.prior_mass, nest.worst_L_series, nest.evidence):
+            writer.writerow([j, x, y, z])
             j += 1
-    return i, nest.prior_mass[-1], nest.evidence[-1], nest.worst_L
-
+    return nest
