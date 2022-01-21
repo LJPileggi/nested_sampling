@@ -27,7 +27,7 @@ class point():
 
 class nested():
     def __init__(self, N_iter, n_points, dim, prior_range, MC_step=0.005, X_stoch=False, trapezoid=False):
-        self._n_points = n_points
+        self.n_points = n_points
         self._dim = dim
         self._prior_range = prior_range
         self._MC_step = MC_step
@@ -36,7 +36,7 @@ class nested():
         self.N_iter = N_iter
         self.points = []
         i = 0
-        while i<self._n_points:
+        while i<self.n_points:
             theta = polar_nd_init(dim, prior_range)
             self.points.append(point(theta, gauss(theta)))
             i += 1
@@ -53,7 +53,7 @@ class nested():
     def find_worst(self):
         worst, L_w = 0, self.points[0].likelihood
         i = 1
-        while i<self._n_points:
+        while i<self.n_points:
             if self.points[i].likelihood < L_w:
                 worst, L_w = i, self.points[i].likelihood
             i += 1
@@ -62,9 +62,9 @@ class nested():
 
     def update_quantities(self, iter_step):
         if not self._X_stoch:
-            self.prior_mass.append(np.exp(-iter_step/self._n_points))
+            self.prior_mass.append(np.exp(-iter_step/self.n_points))
         else:
-            self.prior_mass.append(self.prior_mass[-1]*np.random.uniform(0., 1.)**(1./(self._n_points-1)))
+            self.prior_mass.append(self.prior_mass[-1]*np.random.uniform(0., 1.)**(1./(self.n_points-1)))
         if not self._trapezoid:
             self.weights.append(self.prior_mass[iter_step-1]-self.prior_mass[iter_step])
         else:
@@ -72,15 +72,15 @@ class nested():
         self.evidence.append(self.evidence[-1] + self.worst_L*self.weights[-1])
 
     def substitute_worst(self):
-        idx_new = random.choice(range(self._n_points))
+        idx_new = random.choice(range(self.n_points))
         while idx_new == self.worst_idx:
-            idx_new = random.choice(range(self._n_points))
+            idx_new = random.choice(range(self.n_points))
         new_point = point(self.points[idx_new].theta, self.points[idx_new].likelihood)
         new_point.MC_evolution(gauss, self.worst_L, self._dim, np.sqrt(-2.*np.log(self.worst_L))*self._MC_step)
         self.points[self.worst_idx] = new_point
 
     def final_step(self, final_iter):
-        self.prior_mass.append(np.exp(-(final_iter+self._n_points/2.)/self._n_points))
+        self.prior_mass.append(np.exp(-(final_iter+self.n_points/2.)/self.n_points))
         sum_all_L = 0.
         for point in self.points:
             sum_all_L += point.likelihood

@@ -49,9 +49,9 @@ def main():
         args.trapezoid,
         args.automatised) for i in range(args.n_runs)]
     else:
-        N_points = [5, 10, 20, 35, 50, 75, 100,
-        200, 350, 500, 750, 1000, 2000, 3500]
-        N_iter = list(200*np.array(N_points))
+        N_points = [5, 10, 20, 35, 50, 75, 100]#,
+        #200, 350, 500, 750, 1000, 2000, 3500]
+        N_iter = list(1000*np.array(N_points))
         params = [(
         n_iter,
         args.seed+i,
@@ -89,4 +89,4 @@ def main():
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         for result in results:
-            writer.writerow([result.N_iter, result.evidence[-1]])
+            writer.writerow([result.n_points, result.N_iter, result.evidence[-1]])
