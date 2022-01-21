@@ -40,7 +40,7 @@ def main():
     parser.set_defaults(MC_step=0.005)
     parser.set_defaults(record_step=100)
     parser.set_defaults(seed=1)
-    parser.set_defaults(n_runs=12)
+    parser.set_defaults(n_runs=18)
     parser.set_defaults(search_L_per_level=False)
     parser.set_defaults(search_lam=False)
     parser.set_defaults(search_beta=False)
