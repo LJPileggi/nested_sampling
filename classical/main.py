@@ -49,8 +49,8 @@ def main():
         args.trapezoid,
         args.automatised) for i in range(args.n_runs)]
     else:
-        N_points = [5, 10, 20, 35, 50, 75, 100]#,
-        #200, 350, 500, 750, 1000, 2000, 3500]
+        N_points = [5, 10, 20, 35, 50, 75, 100,
+        200, 350, 500, 750, 1000, 2000, 3500]
         N_iter = list(1000*np.array(N_points))
         params = [(
         n_iter,
