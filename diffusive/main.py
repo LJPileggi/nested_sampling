@@ -175,3 +175,21 @@ def main():
             pool.terminate()
             print('forced termination.')
             exit()
+    output_path = os.path.abspath('output')
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    if no_search:
+        out = os.path.join(output_path, f'results.csv')
+    elif args.search_L_per_level:
+        out = os.path.join(output_path, f'results_L_per_lev.csv')
+    elif args.search_lam:
+        out = os.path.join(output_path, f'results_lam.csv')
+    elif args.search_beta:
+        out = os.path.join(output_path, f'results_beta.csv')
+    elif args.search_quantile:
+        out = os.path.join(output_path, f'results_quantile.csv')
+    with open(out, 'w') as f:
+        writer = csv.writer(f, delimiter=',')
+        writer.writerow(['max_level', 'L_per_level', 'levels_finished', 'lam', 'beta', 'quantile', 'evidence'])
+        for result in final:
+            writer.writerow([result.params.max_level, result.params.L_per_level, result.levels_finished, result.params.lam, result.params.beta, result.params.quantile, result.evidence[-1]])

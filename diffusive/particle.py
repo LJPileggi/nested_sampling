@@ -34,9 +34,10 @@ class particle():
         self.level_record = [0]
         self.prior_mass = []
         self.evidence = [0.]
+        self.levels_finished = 0
         self._dim = dim
         self._prior_range = prior_range
-        self._params = params
+        self.params = params
         self._L_buffer = []
         self._swaths = [1.]
         self._unif_iter = 0
@@ -45,7 +46,7 @@ class particle():
         self._no_search = no_search
 
     def weighting(self, level):
-        return np.exp((level-len(self.L_levels)+1)/self._params.lam)
+        return np.exp((level-len(self.L_levels)+1)/self.params.lam)
 
     def expected_visits(self, level):
         norm = 0.
@@ -57,12 +58,11 @@ class particle():
 
     def level_switch(self, level):
         w = np.random.uniform(0., 1.)
-        enforce = (self.level_visits[level-1] + self._params.C1)*(self.expected_visits(level) + self._params.C1)/(self.level_visits[level] + self._params.C1)/(self.expected_visits(level-1) + self._params.C1)
+        enforce = (self.level_visits[level-1] + self.params.C1)*(self.expected_visits(level) + self.params.C1)/(self.level_visits[level] + self.params.C1)/(self.expected_visits(level-1) + self.params.C1)
         if self._creating:
-            ratio = self.weighting(level-1)/self.weighting(level)*(self.relative_visits[level-1][0]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][1]+self._params.C1)*enforce**self._params.beta
+            ratio = self.weighting(level-1)/self.weighting(level)*(self.relative_visits[level-1][0]+self.params.C1*(1.-self.params.quantile))/(self.relative_visits[level-1][1]+self.params.C1)*enforce**self.params.beta
         else:
-            ratio = (self.relative_visits[level-1][0]+self._params.C1*(1.-self._params.quantile))/(self.relative_visits[level-1][1]+self._params.C1)*enforce**self._params.beta#(1.-self._params.quantile)*enforce**self._params.beta
-        #print(ratio)
+            ratio = (self.relative_visits[level-1][0]+self.params.C1*(1.-self.params.quantile))/(self.relative_visits[level-1][1]+self.params.C1)*enforce**self.params.beta
         if w > ratio:
             return True
         else:
@@ -71,7 +71,7 @@ class particle():
     def MC_step(self):
         accept = False
         while not accept:
-            theta_prop = proposal(self.theta, np.sqrt(-2.*np.log(self.L_levels[self.current]))*self._params.MC_step, self._dim)
+            theta_prop = proposal(self.theta, np.sqrt(-2.*np.log(self.L_levels[self.current]))*self.params.MC_step, self._dim)
             L_prop = self._likelihood_func(theta_prop)
             if L_prop > self.L_levels[self.current]:
                 self.theta = theta_prop
@@ -96,9 +96,9 @@ class particle():
     def create_level(self, new_level):
         start = time.time()
         i = 0
-        while i <= self._params.L_per_level:#len(self._L_buffer)
+        while i <= self.params.L_per_level:#len(self._L_buffer)
             self.iter += 1
-            if self.iter%self._params.record_step > self._params.max_recorded_points:
+            if self.iter%self.params.record_step > self.params.max_recorded_points:
                 break
             self.MC_step()
             if self.likelihood >= self.L_levels[-1]:
@@ -112,20 +112,20 @@ class particle():
                     self.relative_visits[new_level-1][0] += 1#./self.weighting(new_level-1)
                 else:
                     pass
-            if self.iter%self._params.record_step == 0:
+            if self.iter%self.params.record_step == 0:
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
                 #print(f'Creating level {new_level}; L_{new_level}: {self.L_levels[-1]}; currently at {self.likelihood}')
         self._L_buffer.sort()
-        quant = floor(len(self._L_buffer)*(1-self._params.quantile))-1
+        quant = floor(len(self._L_buffer)*(1-self.params.quantile))-1
         self.L_levels.append(self._L_buffer[quant])
         self.L_levels.sort()
-        self.relative_visits.append([quant, len(self._L_buffer)*self._params.quantile])
+        self.relative_visits.append([quant, len(self._L_buffer)*self.params.quantile])
         #print(self._L_buffer)
         self._L_buffer = self._L_buffer[quant:]
         #print(self._L_buffer)
         self.level_visits.append(1)
-        time_left = (time.time()-start)*(self._params.max_level-new_level)
+        time_left = (time.time()-start)*(self.params.max_level-new_level)
         if self._no_search:
             if time_left >= 3600.:
                 print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
@@ -136,9 +136,9 @@ class particle():
 
 
     def create_all_levels(self):
-        while len(self.L_levels) <= self._params.max_level:
+        while len(self.L_levels) <= self.params.max_level:
             self.create_level(len(self.L_levels)-1)
-            if self.iter%self._params.record_step > self._params.max_recorded_points:
+            if self.iter%self.params.record_step > self.params.max_recorded_points:
                 break
         self._level_visits_old = self.level_visits
         self._creating = False            
@@ -149,41 +149,41 @@ class particle():
             start = time.time()
             self.iter += 1
             self._unif_iter += 1
-            if self.iter//self._params.record_step > self._params.max_recorded_points:
+            if self.iter//self.params.record_step > self.params.max_recorded_points:
                 break
-            #print(self.current)
             self.MC_step()
             self.level_visits[self.current] += 1
-            if self.iter%self._params.record_step == 0:
+            if self.iter%self.params.record_step == 0:
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
-                time_left = (time.time()-start)*(self._params.max_recorded_points*self._params.record_step - self.iter)
-                if (self.iter//self._params.record_step%100 == 0) & self._no_search:
+                time_left = (time.time()-start)*(self.params.max_recorded_points*self.params.record_step - self.iter)
+                if (self.iter//self.params.record_step%100 == 0) & self._no_search:
                     if time_left >= 3600.:
-                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
-                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
                     else:
-                        print(f'process {os.getpid()}; {self.iter//self._params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
+        self.levels_finished = self.iter%self.params.record_step
 
     def find_evidence(self):
         self.L_record.sort()
         self._swaths.append(self.relative_visits[0][1]/(self.relative_visits[0][1]+self.relative_visits[0][0]))
         for i in range(1, len(self.relative_visits)):
             self._swaths.append(self._swaths[-1]*self.relative_visits[i][1]/(self.relative_visits[i][1]+self.relative_visits[i][0]))
-        self._swaths.append(self._swaths[-1]*self._params.quantile)
+        self._swaths.append(self._swaths[-1]*self.params.quantile)
         for like in self.L_record:
             i, j = 0, 0
             while (i < len(self.L_levels)-1) & (like > self.L_levels[i]):
                 i += 1
             if j == int(self.level_visits[i]):
                 if i == len(self.L_levels)-1:
-                    self.prior_mass.append(self._params.quantile**i*np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1])))
+                    self.prior_mass.append(self.params.quantile**i*np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1])))
                 else:
-                    self.prior_mass.append(self._params.quantile**i*(np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1]))- np.exp(-i-2)**(1/self.level_visits[i+1]*np.log(self._swaths[i+1]/self._swaths[i+2]))))
+                    self.prior_mass.append(self.params.quantile**i*(np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1]))- np.exp(-i-2)**(1/self.level_visits[i+1]*np.log(self._swaths[i+1]/self._swaths[i+2]))))
             else:
-                self.prior_mass.append(self._params.quantile**i*(np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1])) - np.exp(-i-1)**((j+1)/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1]))))
+                self.prior_mass.append(self.params.quantile**i*(np.exp(-i-1)**(j/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1])) - np.exp(-i-1)**((j+1)/self.level_visits[i]*np.log(self._swaths[i]/self._swaths[i+1]))))
             self.evidence.append(self.evidence[-1] + like*self.prior_mass[-1])
             j += 1
 

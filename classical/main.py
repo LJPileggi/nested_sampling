@@ -20,8 +20,8 @@ def main():
     parser.add_argument('--dim', metavar='dim', type=int, dest='dim', help='dimension of the explored space.')
     parser.add_argument('--prior_range', metavar='prior_range', type=float, dest='prior_range', help='sets radius of the explored domain.')
     parser.add_argument('--MC_step', metavar='MC_step', type=float, dest='MC_step', help='sets step for MC evolution w.r.t. dimension of the space.\nValues <0.01 recommended.')
-    parser.add_argument('--stoch_prior', dest='X_stoch', help='finds new values for prior mass stochastically;\ndefault: takes them according to exp(-i/N).')
-    parser.add_argument('--trapezoid', dest='trapezoid', help='sets new weight using trapezoidal rule;\ndefault: takes difference btw consecutive X values.')
+    parser.add_argument('--stoch_prior', dest='X_stoch', type=bool, help='finds new values for prior mass stochastically;\ndefault: takes them according to exp(-i/N).')
+    parser.add_argument('--trapezoid', dest='trapezoid', type=bool, help='sets new weight using trapezoidal rule;\ndefault: takes difference btw consecutive X values.')
     parser.add_argument('--seed', metavar='seed', type=int, dest='seed', help='sets seed for simulation.')
     parser.add_argument('--n_runs', dest='n_runs', type=int, help='\#parallel runs of the simulation;\ndefault: 12.')
     parser.add_argument('--automatised', metavar='automatised', type=bool, dest='automatised', help='runs automatically the algorithm over several configurations of \#points.')
@@ -33,7 +33,7 @@ def main():
     parser.set_defaults(X_stoch=False)
     parser.set_defaults(trapezoid=False)
     parser.set_defaults(seed=1)
-    parser.set_defaults(n_runs=12)
+    parser.set_defaults(n_runs=18)
     parser.set_defaults(automatised=False)
     args = parser.parse_args()
 
@@ -71,3 +71,22 @@ def main():
             pool.terminate()
             print("forced termination")
             exit()
+    output_path = os.path.abspath('output')
+    if not os.path.exists(output_path):
+        os.makedirs(output_path)
+    if args.automatised & args.X_stoch:
+        out = os.path.join(output_path, f'results_loop_X_stoch.csv')
+    elif args.automatised & args.trapezoid:
+        out = os.path.join(output_path, f'results_loop_trapezoid.csv')
+    elif args.automatised:
+        out = os.path.join(output_path, f'results_loop.csv')
+    elif args.X_stoch:
+        out = os.path.join(output_path, f'results_X_stoch.csv')
+    elif args.trapezoid:
+        out = os.path.join(output_path, f'results_trapezoid.csv')
+    else:
+        out = os.path.join(output_path, f'results.csv')
+    with open(out, 'w') as f:
+        writer = csv.writer(f, delimiter=',')
+        for result in results:
+            writer.writerow([result.N_iter, result.evidence[-1]])

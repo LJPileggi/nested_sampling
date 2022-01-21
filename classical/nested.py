@@ -26,13 +26,14 @@ class point():
         self.likelihood = likelihood(self.theta)
 
 class nested():
-    def __init__(self, n_points, dim, prior_range, MC_step=0.005, X_stoch=False, trapezoid=False):
+    def __init__(self, N_iter, n_points, dim, prior_range, MC_step=0.005, X_stoch=False, trapezoid=False):
         self._n_points = n_points
         self._dim = dim
         self._prior_range = prior_range
         self._MC_step = MC_step
         self._X_stoch = X_stoch
         self._trapezoid = trapezoid
+        self.N_iter = N_iter
         self.points = []
         i = 0
         while i<self._n_points:
@@ -98,7 +99,7 @@ def nested_loop(N_iter, seed, *args):
             print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
         else:
             print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time%60:.0f} s.')
-    nest = nested(*args[:-1])
+    nest = nested(N_iter, *args[:-1])
     i = 1
     while i<N_iter:
         start = time.time()
