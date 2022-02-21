@@ -44,7 +44,7 @@ class nested():
         if not trapezoid:
             self.prior_mass = [1.]
         else:
-            self.prior_mass[2.-np.exp(-1./n_points), np.exp(-1./n_points)]
+            self.prior_mass = [2.-np.exp(-1./n_points), np.exp(-1./n_points)]
         self.weights = []
         self.worst_L_series = [0.]
         self.worst_idx = 0
@@ -94,7 +94,7 @@ def nested_loop(N_iter, seed, *args):
     init_time = (time.time() - init_time_start)*args[0]
     if not args[-1]:
         if init_time >= 3600.:
-            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
+            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600:.0f} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
         elif init_time >= 60.:
             print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
         else:
@@ -109,18 +109,19 @@ def nested_loop(N_iter, seed, *args):
         left = (time.time()-start)*(N_iter-i)
         if (i%100 == 0) & (not args[-1]):
             if left >= 3600.:
-                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//3600} h {left//60%60:.0f} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//3600:.0f} h {left//60%60:.0f} m {left%60:.0f} s.')
             elif left >= 60.:
                 print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//60} m {left%60:.0f} s.')
             else:
                 print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left%60:.0f} s.')
         i += 1
-        if 1. - nest.evidence[-2]/nest.evidence[-1] < 0.00001:
-            break
-    nest.final_step(i)
+        #if 1. - nest.evidence[-2]/nest.evidence[-1] < 0.00001:
+            #break
+    #nest.final_step(i)
     print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {time.time()-init_time_start}')
     print(f'process {os.getpid()}; \#iterations: {len(nest.weights)}; last prior mass: {nest.prior_mass[-1]};')
     print(f'process {os.getpid()}; evidence: {nest.evidence[-1]}; last likelihood value: {nest.worst_L}.\n')
+    """
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
@@ -134,4 +135,5 @@ def nested_loop(N_iter, seed, *args):
         for x, y, z in zip(nest.prior_mass, nest.worst_L_series, nest.evidence):
             writer.writerow([j, x, y, z])
             j += 1
+    """
     return nest

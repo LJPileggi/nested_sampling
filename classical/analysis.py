@@ -10,11 +10,11 @@ def parsing():
     parser = argparse.ArgumentParser(description='Analysis of results of Classical Nested Sampling.')
     parser.add_argument('--filename', metavar='filename', dest='filename', help='name of file to be analysed.')
     parser.add_argument('--n_trials', metavar='n_trials', type=int, dest='n_trials', help='\#trials on the same config.')
-    parser.set_defaults(n_trials=18)
+    parser.set_defaults(n_trials=12)
     args = parser.parse_args()
     return args
 
-def data_reader(filename, datalen=18):
+def data_reader(filename, datalen=12):
     folder = './output/'
     f_in = open(folder+filename, 'r', newline='')
     reader = csv.reader(f_in, delimiter=',')
@@ -45,24 +45,25 @@ def power_fit(dev, n_points):
     return pars
 
 def mean_var_plot(n_points, mean_list, var_list):
-    plt.errorbar(n_points, mean_list, var_list, marker='*', linestyle='-', color='black')
-    plt.title('Logarithmic evidence vs #initial points')
+    plt.errorbar(n_points, mean_list, var_list**0.5, marker='*', linestyle='-', color='black')
+    plt.axhline(y=-42+np.log10(7.25), color='red')
+    plt.title('Logarithmic evidence vs $\#$initial points')
     plt.xscale('log')
     plt.xlabel('initial points')
-    plt.ylabel('log_{10}(Z)')
+    plt.ylabel('$log_{10}(Z)$')
     #plt.margins(0, -0.25)
     plt.savefig('logZ_vs_n_p.png')
     plt.clf()
 
-    pars = power_fit(np.log10(var_list), np.log10(n_points))
+    pars = power_fit(np.log10(var_list**0.5), np.log10(n_points))
     print(pars)
-    plt.plot(n_points, var_list, linestyle='', marker='x', color='red')
-    plt.plot(n_points, pars[1]*n_points**pars[0], linestyle='-', color='black')
+    plt.plot(n_points, var_list**0.5, linestyle='', marker='x', color='red')
+    plt.plot(n_points, 10**pars[1]*n_points**pars[0], linestyle='-', color='black')
     plt.xscale('log')
     plt.yscale('log')
-    plt.title('Error on log_{10}(Z) vs \#initial points')
+    plt.title('Error on $log_{10}(Z)$ vs $\#$initial points')
     plt.xlabel('initial points')
-    plt.ylabel('\Delta log_{10}(Z)')
+    plt.ylabel('$\Delta log_{10}(Z)$')
     plt.savefig('d_logZ_n_p.png')
 
 if __name__ == '__main__':

@@ -50,7 +50,7 @@ def main():
         args.automatised) for i in range(args.n_runs)]
     else:
         N_points = [5, 10, 20, 35, 50, 75, 100,
-        200, 350, 500, 750, 1000, 2000, 3500]
+        200, 350, 500, 750, 1000, 2000, 3500]#, 5000, 7500, 10000, 20000, 35000]#50000, 75000]
         N_iter = list(1000*np.array(N_points))
         params = [(
         n_iter,

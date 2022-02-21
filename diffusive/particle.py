@@ -128,7 +128,7 @@ class particle():
         time_left = (time.time()-start)*(self.params.max_level-new_level)
         if self._no_search:
             if time_left >= 3600.:
-                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
             elif time_left >= 60.:
                 print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
             else:
@@ -159,13 +159,13 @@ class particle():
                 time_left = (time.time()-start)*(self.params.max_recorded_points*self.params.record_step - self.iter)
                 if (self.iter//self.params.record_step%100 == 0) & self._no_search:
                     if time_left >= 3600.:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
                         print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
                     else:
                         print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
-        self.levels_finished = self.iter%self.params.record_step
+        self.levels_finished = self.iter//self.params.record_step
 
     def find_evidence(self):
         self.L_record.sort()
@@ -202,6 +202,7 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search):
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile:.4f}.csv')
+    """
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['max_level', 'L_per_level', 'max_points', 'C1', 'lam', 'beta', 'quantile'])
@@ -211,4 +212,5 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search):
         for x, y, z, t in zip(part.level_record, part.prior_mass, part.L_record, part.evidence):
             writer.writerow([j, x, y, z, t])
             j += 1
+    """
     return part

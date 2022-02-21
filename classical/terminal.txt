@@ -1,0 +1,1020 @@
+process 10772; simulation completed. \#points: 35; time taken: 4.79800009727478
+process 10772; \#iterations: 3242; last prior mass: 3.5873629712336406e-41;
+process 10772; evidence: 1.4098127056861204e-42; last likelihood value: 7.76553050189576e-06.
+
+process 12576; simulation completed. \#points: 75; time taken: 10.466000080108643
+process 12576; \#iterations: 6871; last prior mass: 9.901195222735346e-41;
+process 12576; evidence: 2.5076525886284132e-43; last likelihood value: 1.048235763405048e-06.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.832000017166138
+process 17156; \#iterations: 4591; last prior mass: 8.052550010469565e-41;
+process 17156; evidence: 1.843304961083234e-42; last likelihood value: 6.575501057760044e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.516000270843506
+process 13708; \#iterations: 6936; last prior mass: 4.161971218972296e-41;
+process 13708; evidence: 2.7994824318046068e-43; last likelihood value: 2.8366978094260862e-06.
+
+process 17528; simulation completed. \#points: 35; time taken: 4.854999542236328
+process 17528; \#iterations: 3261; last prior mass: 2.0845650853357703e-41;
+process 17528; evidence: 6.9710268210157236e-43; last likelihood value: 6.684391580240376e-06.
+
+process 10772; simulation completed. \#points: 35; time taken: 4.8650007247924805
+process 10772; \#iterations: 3227; last prior mass: 5.506828197912634e-41;
+process 10772; evidence: 1.8236387939123765e-42; last likelihood value: 6.531229767697951e-06.
+
+process 2004; simulation completed. \#points: 100; time taken: 13.2579984664917
+process 2004; \#iterations: 8782; last prior mass: 4.396543336210145e-39;
+process 2004; evidence: 5.868011065997405e-41; last likelihood value: 7.227136004869694e-06.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.881998777389526
+process 17156; \#iterations: 4344; last prior mass: 1.1255069245577329e-38;
+process 17156; evidence: 2.5107286972311122e-40; last likelihood value: 6.411836303177021e-06.
+
+process 17528; simulation completed. \#points: 35; time taken: 4.962000370025635
+process 17528; \#iterations: 3211; last prior mass: 8.698335364146144e-41;
+process 17528; evidence: 3.0122873375706616e-42; last likelihood value: 6.95059179907422e-06.
+
+process 10772; simulation completed. \#points: 35; time taken: 5.273999929428101
+process 10772; \#iterations: 3359; last prior mass: 1.2676253338561139e-42;
+process 10772; evidence: 2.6120916008021756e-44; last likelihood value: 4.127856481406263e-06.
+
+process 12576; simulation completed. \#points: 75; time taken: 10.198000431060791
+process 12576; \#iterations: 6675; last prior mass: 1.3509642905558535e-39;
+process 12576; evidence: 6.493450123680982e-42; last likelihood value: 2.009870375634497e-06.
+
+process 17528; simulation completed. \#points: 35; time taken: 5.242999792098999
+process 17528; \#iterations: 3335; last prior mass: 2.5164762765664184e-42;
+process 17528; evidence: 1.0386170684603434e-43; last likelihood value: 8.286124985118692e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.864999055862427
+process 13708; \#iterations: 6875; last prior mass: 9.386966138658387e-41;
+process 13708; evidence: 6.777726128423802e-43; last likelihood value: 3.011559051246219e-06.
+
+process 10772; simulation completed. \#points: 35; time taken: 4.874999523162842
+process 10772; \#iterations: 3127; last prior mass: 9.588328493695587e-40;
+process 10772; evidence: 3.975390426060003e-42; last likelihood value: 8.239611424331295e-07.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.955999851226807
+process 17156; \#iterations: 4548; last prior mass: 1.902946966884185e-40;
+process 17156; evidence: 2.8208550090875574e-42; last likelihood value: 4.254113720158262e-06.
+
+process 17528; simulation completed. \#points: 35; time taken: 4.696000337600708
+process 17528; \#iterations: 3119; last prior mass: 1.2050642830896294e-39;
+process 17528; evidence: 5.968248688951132e-42; last likelihood value: 9.836765616621453e-07.
+
+process 2004; simulation completed. \#points: 100; time taken: 12.811000108718872
+process 2004; \#iterations: 8527; last prior mass: 5.630698679181874e-38;
+process 2004; evidence: 3.9094526367792893e-41; last likelihood value: 3.7724415916605674e-07.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.704997301101685
+process 17156; \#iterations: 4530; last prior mass: 2.727549861983483e-40;
+process 17156; evidence: 1.1463525464292583e-42; last likelihood value: 1.1987827500936945e-06.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.402998447418213
+process 12576; \#iterations: 8881; last prior mass: 1.6336530248039763e-39;
+process 12576; evidence: 1.939328373989153e-41; last likelihood value: 6.393162934647461e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.546000242233276
+process 13708; \#iterations: 6841; last prior mass: 1.4770847569444223e-40;
+process 13708; evidence: 1.432760375601518e-43; last likelihood value: 3.961237446220458e-07.
+
+process 17528; simulation completed. \#points: 50; time taken: 6.808999300003052
+process 17528; \#iterations: 4603; last prior mass: 6.334360190867068e-41;
+process 17528; evidence: 3.994633668318067e-43; last likelihood value: 1.7769134311763616e-06.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.822000026702881
+process 17156; \#iterations: 4660; last prior mass: 2.0258488800752408e-41;
+process 17156; evidence: 1.2558347085354155e-42; last likelihood value: 1.7584397870120696e-05.
+
+process 17528; simulation completed. \#points: 50; time taken: 6.903999328613281
+process 17528; \#iterations: 4676; last prior mass: 1.4710682135234612e-41;
+process 17528; evidence: 2.4033870755234147e-42; last likelihood value: 4.576411654642682e-05.
+
+process 2004; simulation completed. \#points: 100; time taken: 13.54299807548523
+process 2004; \#iterations: 9102; last prior mass: 1.7921279627032414e-40;
+process 2004; evidence: 6.118395749408852e-43; last likelihood value: 1.8540865796572756e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.292999744415283
+process 13708; \#iterations: 6808; last prior mass: 2.2934801644606943e-40;
+process 13708; evidence: 9.839271310057541e-43; last likelihood value: 1.803311582070913e-06.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.699000597000122
+process 17156; \#iterations: 4547; last prior mass: 1.9413890456150885e-40;
+process 17156; evidence: 3.734528214582869e-42; last likelihood value: 5.4692792860166975e-06.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.34999966621399
+process 12576; \#iterations: 8932; last prior mass: 9.810014187080816e-40;
+process 12576; evidence: 2.7473772061866536e-42; last likelihood value: 1.5222200881391066e-06.
+
+process 17528; simulation completed. \#points: 50; time taken: 6.4009997844696045
+process 17528; \#iterations: 4388; last prior mass: 4.6684103928583384e-39;
+process 17528; evidence: 2.4283681134313476e-40; last likelihood value: 1.4858049003117996e-05.
+
+process 10772; simulation completed. \#points: 200; time taken: 25.376998901367188
+process 10772; \#iterations: 17078; last prior mass: 4.993981731562687e-38;
+process 10772; evidence: 2.3457206803879896e-41; last likelihood value: 3.9455043888168856e-07.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.786999702453613
+process 17156; \#iterations: 4508; last prior mass: 4.235086359551342e-40;
+process 17156; evidence: 1.883935393087437e-42; last likelihood value: 1.25613835606729e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 9.958000183105469
+process 13708; \#iterations: 6673; last prior mass: 1.3874746461610986e-39;
+process 13708; evidence: 4.2197217661541295e-42; last likelihood value: 1.2766627383243663e-06.
+
+process 2004; simulation completed. \#points: 100; time taken: 13.272000789642334
+process 2004; \#iterations: 8896; last prior mass: 1.406098189159717e-39;
+process 2004; evidence: 2.433597047216492e-42; last likelihood value: 9.252504954385442e-07.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.8319995403289795
+process 17156; \#iterations: 4606; last prior mass: 5.965475770706544e-41;
+process 17156; evidence: 9.118572668843181e-43; last likelihood value: 4.351719707381553e-06.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.717999935150146
+process 12576; \#iterations: 9162; last prior mass: 9.835406793010118e-41;
+process 12576; evidence: 7.456531817405222e-43; last likelihood value: 4.101794112093272e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.210999727249146
+process 13708; \#iterations: 6792; last prior mass: 2.838863283499348e-40;
+process 13708; evidence: 3.901636059064565e-43; last likelihood value: 5.815061945331685e-07.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.8939995765686035
+process 17156; \#iterations: 4629; last prior mass: 3.7659072917148893e-41;
+process 17156; evidence: 3.194310191526466e-43; last likelihood value: 2.4380569021621888e-06.
+
+process 2004; simulation completed. \#points: 100; time taken: 13.100000858306885
+process 2004; \#iterations: 8843; last prior mass: 2.3888656426534503e-39;
+process 2004; evidence: 7.56951547869227e-42; last likelihood value: 1.7215074005991493e-06.
+
+process 17156; simulation completed. \#points: 50; time taken: 6.612998008728027
+process 17156; \#iterations: 4442; last prior mass: 1.5853712812890272e-39;
+process 17156; evidence: 5.473100206565846e-42; last likelihood value: 9.864749193879927e-07.
+
+process 12576; simulation completed. \#points: 100; time taken: 12.790000200271606
+process 12576; \#iterations: 8589; last prior mass: 3.029003034237556e-38;
+process 12576; evidence: 1.1156971491625401e-40; last likelihood value: 1.9825121809703285e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.121000051498413
+process 13708; \#iterations: 6755; last prior mass: 4.64939476514744e-40;
+process 13708; evidence: 3.040010006631126e-42; last likelihood value: 2.7545264575255795e-06.
+
+process 10772; simulation completed. \#points: 200; time taken: 26.251999616622925
+process 10772; \#iterations: 17614; last prior mass: 3.424031393047828e-39;
+process 10772; evidence: 1.85796469995325e-42; last likelihood value: 4.5705506028235067e-07.
+
+process 2004; simulation completed. \#points: 100; time taken: 13.877999782562256
+process 2004; \#iterations: 9171; last prior mass: 8.988884987960524e-41;
+process 2004; evidence: 7.208958656067034e-43; last likelihood value: 4.168606342995454e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 9.632999897003174
+process 13708; \#iterations: 6549; last prior mass: 7.248674515964571e-39;
+process 13708; evidence: 1.2089175794950784e-41; last likelihood value: 6.996267513433769e-07.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.368000268936157
+process 12576; \#iterations: 9010; last prior mass: 4.496969474347367e-40;
+process 12576; evidence: 7.60560451003733e-42; last likelihood value: 9.196072581363823e-06.
+
+process 17528; simulation completed. \#points: 350; time taken: 46.39199948310852
+process 17528; \#iterations: 30523; last prior mass: 8.103104000385429e-39;
+process 17528; evidence: 4.4096184439837755e-42; last likelihood value: 4.994421646214343e-07.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.253997802734375
+process 13708; \#iterations: 6853; last prior mass: 1.2586886014068597e-40;
+process 13708; evidence: 3.748919084263925e-42; last likelihood value: 1.2601248473676613e-05.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.435999870300293
+process 12576; \#iterations: 9159; last prior mass: 1.0134939523134507e-40;
+process 12576; evidence: 4.6348992971844065e-43; last likelihood value: 2.485064104981098e-06.
+
+process 10772; simulation completed. \#points: 200; time taken: 26.499000787734985
+process 10772; \#iterations: 17713; last prior mass: 2.0871899228712007e-39;
+process 10772; evidence: 1.4094804823310003e-42; last likelihood value: 5.824301340329508e-07.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.322999715805054
+process 13708; \#iterations: 6887; last prior mass: 7.999044892293912e-41;
+process 13708; evidence: 3.402519107544854e-43; last likelihood value: 1.7898772408124656e-06.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.832000017166138
+process 2004; \#iterations: 17465; last prior mass: 7.212521600990655e-39;
+process 2004; evidence: 3.897638132485427e-41; last likelihood value: 4.435301679289819e-06.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.054999828338623
+process 12576; \#iterations: 8845; last prior mass: 2.341562933637011e-39;
+process 12576; evidence: 6.090785635234251e-42; last likelihood value: 1.406068167800935e-06.
+
+process 13708; simulation completed. \#points: 75; time taken: 9.693997859954834
+process 13708; \#iterations: 6585; last prior mass: 4.485359403087276e-39;
+process 13708; evidence: 9.542786546425694e-42; last likelihood value: 9.032200433701897e-07.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.11299991607666
+process 13708; \#iterations: 6901; last prior mass: 6.636969637511772e-41;
+process 13708; evidence: 3.997121646897012e-42; last likelihood value: 2.5193300174384465e-05.
+
+process 12576; simulation completed. \#points: 100; time taken: 12.779000520706177
+process 12576; \#iterations: 8650; last prior mass: 1.6458114310822737e-38;
+process 12576; evidence: 3.4765215998010985e-41; last likelihood value: 1.125564834157398e-06.
+
+process 10772; simulation completed. \#points: 200; time taken: 25.827001094818115
+process 10772; \#iterations: 17307; last prior mass: 1.5892044319916656e-38;
+process 10772; evidence: 1.4401079437017812e-41; last likelihood value: 7.555431786566675e-07.
+
+process 13708; simulation completed. \#points: 75; time taken: 10.278997659683228
+process 13708; \#iterations: 6921; last prior mass: 5.083443126236021e-41;
+process 13708; evidence: 8.621780615092934e-43; last likelihood value: 7.167794256584664e-06.
+
+process 2004; simulation completed. \#points: 200; time taken: 26.689999103546143
+process 2004; \#iterations: 17822; last prior mass: 1.2102399270465914e-39;
+process 2004; evidence: 3.3353387488786866e-42; last likelihood value: 2.3580073906942897e-06.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.04899835586548
+process 17156; \#iterations: 42325; last prior mass: 1.0467063669918243e-37;
+process 17156; evidence: 3.5248131602790023e-41; last likelihood value: 2.496282525910976e-07.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.226000308990479
+process 12576; \#iterations: 8910; last prior mass: 1.2224030405253472e-39;
+process 12576; evidence: 4.5066645656734266e-42; last likelihood value: 2.0089433586444086e-06.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.063000202178955
+process 17528; \#iterations: 29811; last prior mass: 6.196271991369081e-38;
+process 17528; evidence: 1.4035068447107812e-41; last likelihood value: 2.088553081180601e-07.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.59600019454956
+process 12576; \#iterations: 8982; last prior mass: 5.9500743766804205e-40;
+process 12576; evidence: 4.399838078922703e-43; last likelihood value: 3.9591464857021493e-07.
+
+process 10772; simulation completed. \#points: 200; time taken: 26.435999870300293
+process 10772; \#iterations: 17776; last prior mass: 1.5232079841978964e-39;
+process 10772; evidence: 4.029878474985723e-42; last likelihood value: 2.078003821355519e-06.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.880000114440918
+process 2004; \#iterations: 17406; last prior mass: 9.687327874884709e-39;
+process 2004; evidence: 9.356210964593837e-42; last likelihood value: 8.275522186881993e-07.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.557000160217285
+process 12576; \#iterations: 9154; last prior mass: 1.0654568984190281e-40;
+process 12576; evidence: 8.595986449229703e-43; last likelihood value: 4.346863690649823e-06.
+
+process 12576; simulation completed. \#points: 100; time taken: 13.629000663757324
+process 12576; \#iterations: 9160; last prior mass: 1.0034095189937283e-40;
+process 12576; evidence: 8.918058956983736e-43; last likelihood value: 4.733862465714489e-06.
+
+process 10772; simulation completed. \#points: 200; time taken: 26.994999408721924
+process 10772; \#iterations: 17978; last prior mass: 5.54781257679752e-40;
+process 10772; evidence: 8.848746033855008e-43; last likelihood value: 1.2854886576185044e-06.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.002999782562256
+process 17528; \#iterations: 29763; last prior mass: 7.107074359409986e-38;
+process 17528; evidence: 4.840702524393429e-41; last likelihood value: 6.123216953885669e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 26.58799982070923
+process 2004; \#iterations: 17877; last prior mass: 9.192645109984052e-40;
+process 2004; evidence: 3.5804442561435347e-43; last likelihood value: 3.224568487288578e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 63.84500026702881
+process 17156; \#iterations: 41924; last prior mass: 2.334151497656943e-37;
+process 17156; evidence: 7.421772750305097e-41; last likelihood value: 2.159079232372156e-07.
+
+process 10772; simulation completed. \#points: 200; time taken: 25.865999698638916
+process 10772; \#iterations: 17271; last prior mass: 1.9026231395305418e-38;
+process 10772; evidence: 2.0763845170452496e-41; last likelihood value: 8.91800059104311e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.660999298095703
+process 2004; \#iterations: 17214; last prior mass: 2.5300360047730063e-38;
+process 2004; evidence: 2.2815780179711618e-41; last likelihood value: 7.336033610149624e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.758999824523926
+process 17528; \#iterations: 30186; last prior mass: 2.122339988328848e-38;
+process 17528; evidence: 9.394046079980125e-42; last likelihood value: 3.93711731513497e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 97.27199864387512
+process 13708; \#iterations: 61271; last prior mass: 2.0105266066581524e-36;
+process 13708; evidence: 3.6951667578152006e-40; last likelihood value: 9.572608354600092e-08.
+
+process 10772; simulation completed. \#points: 200; time taken: 25.749000310897827
+process 10772; \#iterations: 17389; last prior mass: 1.0546759188090197e-38;
+process 10772; evidence: 6.528192967883636e-42; last likelihood value: 4.7146755473266163e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.59500002861023
+process 2004; \#iterations: 17295; last prior mass: 1.6874753458206138e-38;
+process 2004; evidence: 6.815902126445299e-42; last likelihood value: 3.4118976384848835e-07.
+
+process 10772; simulation completed. \#points: 200; time taken: 26.34999990463257
+process 10772; \#iterations: 17745; last prior mass: 1.7785859291675653e-39;
+process 10772; evidence: 5.3620801223856294e-43; last likelihood value: 2.554583015157446e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.460000038146973
+process 2004; \#iterations: 17261; last prior mass: 2.00017271388466e-38;
+process 2004; evidence: 1.791072497210114e-41; last likelihood value: 7.483058254845369e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 64.66799926757812
+process 17156; \#iterations: 42176; last prior mass: 1.4100828207416214e-37;
+process 17156; evidence: 1.410685767897742e-40; last likelihood value: 7.90365779818623e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.17399978637695
+process 17528; \#iterations: 29901; last prior mass: 4.791315279465358e-38;
+process 17528; evidence: 3.227934970971447e-41; last likelihood value: 5.870022680263219e-07.
+
+process 12576; simulation completed. \#points: 750; time taken: 100.25399875640869
+process 12576; \#iterations: 63807; last prior mass: 6.836210336841301e-38;
+process 12576; evidence: 3.017631477563688e-41; last likelihood value: 2.2105552270832683e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 25.69399929046631
+process 2004; \#iterations: 17350; last prior mass: 1.2817592313147442e-38;
+process 2004; evidence: 1.6778588629453163e-41; last likelihood value: 1.109172597789185e-06.
+
+process 10772; simulation completed. \#points: 350; time taken: 43.81500005722046
+process 10772; \#iterations: 29258; last prior mass: 3.0082626712505014e-37;
+process 10772; evidence: 1.7165296238223146e-40; last likelihood value: 5.092891429235394e-07.
+
+process 2004; simulation completed. \#points: 200; time taken: 26.309000253677368
+process 2004; \#iterations: 17565; last prior mass: 4.3746154848404806e-39;
+process 2004; evidence: 3.9891639899994164e-42; last likelihood value: 7.469897295112334e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.609965562820435
+process 17528; \#iterations: 30312; last prior mass: 1.4807063657309064e-38;
+process 17528; evidence: 8.718777950438077e-42; last likelihood value: 4.5716413850238273e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 97.58100008964539
+process 13708; \#iterations: 61927; last prior mass: 8.383915991631443e-37;
+process 13708; evidence: 1.6739288667495108e-40; last likelihood value: 1.0952219406365582e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.62300086021423
+process 17156; \#iterations: 42886; last prior mass: 3.408367827589605e-38;
+process 17156; evidence: 4.275155474335688e-41; last likelihood value: 9.967173320351084e-07.
+
+process 10772; simulation completed. \#points: 350; time taken: 45.885000467300415
+process 10772; \#iterations: 30680; last prior mass: 5.1741535969250756e-39;
+process 10772; evidence: 6.15044276268541e-42; last likelihood value: 9.791196699727243e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.367000102996826
+process 17528; \#iterations: 29973; last prior mass: 3.9004451070296664e-38;
+process 17528; evidence: 5.220624471438433e-41; last likelihood value: 1.2396525351676067e-06.
+
+process 12576; simulation completed. \#points: 750; time taken: 99.18800044059753
+process 12576; \#iterations: 62914; last prior mass: 2.2486164308339466e-37;
+process 12576; evidence: 5.226127416690114e-41; last likelihood value: 1.3080014963778697e-07.
+
+process 10772; simulation completed. \#points: 350; time taken: 45.501999855041504
+process 10772; \#iterations: 30202; last prior mass: 2.0275029506994085e-38;
+process 10772; evidence: 9.865441889576607e-42; last likelihood value: 3.871547646864098e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.35599970817566
+process 17156; \#iterations: 42723; last prior mass: 4.72200517111422e-38;
+process 17156; evidence: 4.618959981042425e-41; last likelihood value: 8.159202011207362e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 45.138999223709106
+process 17528; \#iterations: 30285; last prior mass: 1.5994536548308368e-38;
+process 17528; evidence: 1.260508959625024e-41; last likelihood value: 6.430789338003508e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 100.89500021934509
+process 13708; \#iterations: 63736; last prior mass: 7.51499381692702e-38;
+process 13708; evidence: 1.0053009889143004e-40; last likelihood value: 7.812751253036235e-07.
+
+process 10772; simulation completed. \#points: 350; time taken: 45.51199984550476
+process 10772; \#iterations: 29926; last prior mass: 4.4610153225373817e-38;
+process 10772; evidence: 3.2589882792940916e-41; last likelihood value: 6.084334778969311e-07.
+
+process 2004; simulation completed. \#points: 1000; time taken: 128.66599869728088
+process 2004; \#iterations: 79136; last prior mass: 2.5973150926357113e-35;
+process 2004; evidence: 4.938983535435658e-39; last likelihood value: 6.845038111157904e-08.
+
+process 17528; simulation completed. \#points: 350; time taken: 43.46599984169006
+process 17528; \#iterations: 29022; last prior mass: 5.904108359949266e-37;
+process 17528; evidence: 4.596770756420043e-40; last likelihood value: 6.32887520507754e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.0389997959137
+process 17156; \#iterations: 42471; last prior mass: 7.81647381272486e-38;
+process 17156; evidence: 2.1416856441531817e-41; last likelihood value: 2.203105086123656e-07.
+
+process 12576; simulation completed. \#points: 750; time taken: 98.10400056838989
+process 12576; \#iterations: 62339; last prior mass: 4.840324549261827e-37;
+process 12576; evidence: 1.2502425665483406e-40; last likelihood value: 1.485037236109971e-07.
+
+process 10772; simulation completed. \#points: 350; time taken: 44.93900012969971
+process 10772; \#iterations: 29960; last prior mass: 4.048042916267655e-38;
+process 10772; evidence: 1.8835574916012516e-41; last likelihood value: 4.049988764487056e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 44.97000026702881
+process 17528; \#iterations: 30021; last prior mass: 3.400586169266876e-38;
+process 17528; evidence: 9.175658453467527e-42; last likelihood value: 1.9855279345544166e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.30400037765503
+process 17156; \#iterations: 42677; last prior mass: 5.177040359293333e-38;
+process 17156; evidence: 1.0380826352817768e-40; last likelihood value: 1.5106660971751801e-06.
+
+process 13708; simulation completed. \#points: 750; time taken: 98.85499978065491
+process 13708; \#iterations: 62478; last prior mass: 4.021473753434938e-37;
+process 13708; evidence: 1.493786764870628e-40; last likelihood value: 2.0126258369056703e-07.
+
+process 10772; simulation completed. \#points: 350; time taken: 45.30600023269653
+process 10772; \#iterations: 29953; last prior mass: 4.1298188076620615e-38;
+process 10772; evidence: 4.0589867623643927e-41; last likelihood value: 8.004994449547274e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 46.25800013542175
+process 17528; \#iterations: 30094; last prior mass: 2.7604021921788354e-38;
+process 17528; evidence: 2.0211746582046618e-41; last likelihood value: 6.356978175357032e-07.
+
+process 2004; simulation completed. \#points: 1000; time taken: 135.95599961280823
+process 2004; \#iterations: 83825; last prior mass: 2.388459125786366e-37;
+process 2004; evidence: 7.013040115992973e-41; last likelihood value: 1.4073438758697758e-07.
+
+process 17528; simulation completed. \#points: 350; time taken: 46.16399931907654
+process 17528; \#iterations: 30312; last prior mass: 1.4807063657309064e-38;
+process 17528; evidence: 1.3908825854589525e-41; last likelihood value: 8.535384453242462e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 67.23499965667725
+process 17156; \#iterations: 42799; last prior mass: 4.056147103586094e-38;
+process 17156; evidence: 2.3066472831870963e-41; last likelihood value: 4.077263832132544e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 136.22300004959106
+process 12576; \#iterations: 84101; last prior mass: 1.8123936692413916e-37;
+process 12576; evidence: 5.001656765292334e-41; last likelihood value: 1.1044471741019454e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 99.50099968910217
+process 13708; \#iterations: 62090; last prior mass: 6.746216128258787e-37;
+process 13708; evidence: 1.5447628613114833e-40; last likelihood value: 1.1194133525604942e-07.
+
+process 17528; simulation completed. \#points: 500; time taken: 65.0430006980896
+process 17528; \#iterations: 42914; last prior mass: 3.2227451704957106e-38;
+process 17528; evidence: 1.3879616755631715e-41; last likelihood value: 2.5653174472621795e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 63.94500017166138
+process 17156; \#iterations: 42126; last prior mass: 1.5583825255617298e-37;
+process 17156; evidence: 4.3171264141651795e-41; last likelihood value: 2.1071035380518877e-07.
+
+process 2004; simulation completed. \#points: 1000; time taken: 132.09399962425232
+process 2004; \#iterations: 82418; last prior mass: 9.75371697708543e-37;
+process 2004; evidence: 1.0391295321377695e-40; last likelihood value: 4.656590864068202e-08.
+
+process 17528; simulation completed. \#points: 500; time taken: 64.75000023841858
+process 17528; \#iterations: 42556; last prior mass: 6.594483945642944e-38;
+process 17528; evidence: 4.383695616018826e-41; last likelihood value: 5.222586863811147e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.60900020599365
+process 17156; \#iterations: 42827; last prior mass: 3.835245827369139e-38;
+process 17156; evidence: 1.2381031346461219e-41; last likelihood value: 2.4798938687193845e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 101.52800011634827
+process 13708; \#iterations: 64375; last prior mass: 3.205602949475871e-38;
+process 13708; evidence: 2.59460792895291e-41; last likelihood value: 4.7379531140072076e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 133.49300003051758
+process 12576; \#iterations: 83470; last prior mass: 3.406374198738585e-37;
+process 12576; evidence: 9.2614578884219e-41; last likelihood value: 1.2278128848376125e-07.
+
+process 17528; simulation completed. \#points: 500; time taken: 64.05200004577637
+process 17528; \#iterations: 42222; last prior mass: 1.286143802083501e-37;
+process 17528; evidence: 6.039114790901507e-41; last likelihood value: 3.760704201151272e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 66.01800084114075
+process 17156; \#iterations: 43007; last prior mass: 2.6757602184181544e-38;
+process 17156; evidence: 1.6813142608435228e-41; last likelihood value: 4.594228382381127e-07.
+
+process 10772; simulation completed. \#points: 2000; time taken: 283.21999979019165
+process 10772; \#iterations: 161781; last prior mass: 4.493191934714877e-36;
+process 10772; evidence: 1.1372763505402975e-39; last likelihood value: 5.471722628570334e-08.
+
+process 13708; simulation completed. \#points: 750; time taken: 96.13599991798401
+process 13708; \#iterations: 61203; last prior mass: 2.201333576351463e-36;
+process 13708; evidence: 1.2185269185430009e-39; last likelihood value: 3.08853380386587e-07.
+
+process 2004; simulation completed. \#points: 1000; time taken: 133.70699954032898
+process 2004; \#iterations: 82811; last prior mass: 6.584039355351579e-37;
+process 2004; evidence: 1.2902774898037843e-40; last likelihood value: 8.027834136249031e-08.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.5269992351532
+process 17156; \#iterations: 42790; last prior mass: 4.1298188076620615e-38;
+process 17156; evidence: 1.7355228007973164e-41; last likelihood value: 2.9081051226398237e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 134.19600009918213
+process 12576; \#iterations: 83432; last prior mass: 3.5383072711012236e-37;
+process 12576; evidence: 9.349445581765531e-41; last likelihood value: 1.0519779295665966e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 63.802000284194946
+process 17156; \#iterations: 41881; last prior mass: 2.5437730733694266e-37;
+process 17156; evidence: 6.001902999149145e-41; last likelihood value: 1.6252393821782418e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 97.66799998283386
+process 13708; \#iterations: 61796; last prior mass: 9.983979657480476e-37;
+process 13708; evidence: 1.7003388538096155e-40; last likelihood value: 9.527554758056748e-08.
+
+process 2004; simulation completed. \#points: 1000; time taken: 132.96199989318848
+process 2004; \#iterations: 82049; last prior mass: 1.410667995371051e-36;
+process 2004; evidence: 3.0988169406732855e-40; last likelihood value: 7.858515848146849e-08.
+
+process 17156; simulation completed. \#points: 500; time taken: 66.05499982833862
+process 17156; \#iterations: 43266; last prior mass: 1.5939792038643714e-38;
+process 17156; evidence: 6.663039884883383e-42; last likelihood value: 3.0864807792101187e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 129.3880000114441
+process 12576; \#iterations: 81379; last prior mass: 2.7567800435807993e-36;
+process 12576; evidence: 3.341614037537587e-40; last likelihood value: 5.109459570712923e-08.
+
+process 13708; simulation completed. \#points: 750; time taken: 99.28099966049194
+process 13708; \#iterations: 63098; last prior mass: 1.759415715517608e-37;
+process 13708; evidence: 3.95136734140128e-41; last likelihood value: 1.2832300478724676e-07.
+
+process 17156; simulation completed. \#points: 500; time taken: 65.78500056266785
+process 17156; \#iterations: 42800; last prior mass: 4.048042916267655e-38;
+process 17156; evidence: 1.00975731456141e-41; last likelihood value: 1.940274483705658e-07.
+
+process 10772; simulation completed. \#points: 2000; time taken: 283.8100001811981
+process 10772; \#iterations: 163304; last prior mass: 2.0981654082487335e-36;
+process 10772; evidence: 5.589092881582075e-40; last likelihood value: 4.92142776297256e-08.
+
+process 2004; simulation completed. \#points: 1000; time taken: 130.12700009346008
+process 2004; \#iterations: 81455; last prior mass: 2.5550284223101817e-36;
+process 2004; evidence: 6.824248045813066e-40; last likelihood value: 1.1418334444941968e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 101.65900087356567
+process 13708; \#iterations: 64194; last prior mass: 4.080557143096067e-38;
+process 13708; evidence: 1.5902572256556213e-41; last likelihood value: 2.1832646692738823e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 132.25699925422668
+process 12576; \#iterations: 81651; last prior mass: 2.100264623089478e-36;
+process 12576; evidence: 4.402008562376735e-39; last likelihood value: 1.0532894013637652e-06.
+
+process 13708; simulation completed. \#points: 750; time taken: 99.10600018501282
+process 13708; \#iterations: 62979; last prior mass: 2.0619423785964347e-37;
+process 13708; evidence: 7.52119837599801e-41; last likelihood value: 1.762963501989574e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 131.69899988174438
+process 12576; \#iterations: 82056; last prior mass: 1.4008278002670943e-36;
+process 12576; evidence: 1.997720708795235e-40; last likelihood value: 6.002061311486868e-08.
+
+process 17528; simulation completed. \#points: 3500; time taken: 534.9269986152649
+process 17528; \#iterations: 268042; last prior mass: 3.3349730232987644e-34;
+process 17528; evidence: 3.524807254392963e-38; last likelihood value: 7.498422553405865e-09.
+
+process 13708; simulation completed. \#points: 750; time taken: 101.67099952697754
+process 13708; \#iterations: 64100; last prior mass: 4.6254185635988e-38;
+process 13708; evidence: 3.2643788357750364e-41; last likelihood value: 3.4567705332076827e-07.
+
+process 10772; simulation completed. \#points: 2000; time taken: 284.5840001106262
+process 10772; \#iterations: 161516; last prior mass: 5.1297829471251784e-36;
+process 10772; evidence: 5.837186740707019e-40; last likelihood value: 2.3417887525606498e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 278.4180009365082
+process 2004; \#iterations: 158130; last prior mass: 2.788428721118227e-35;
+process 2004; evidence: 5.420673291337761e-39; last likelihood value: 3.312999629021733e-08.
+
+process 12576; simulation completed. \#points: 1000; time taken: 135.25699973106384
+process 12576; \#iterations: 83429; last prior mass: 3.5489381312315792e-37;
+process 12576; evidence: 8.854464192945024e-41; last likelihood value: 1.1211605703907263e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 94.58599972724915
+process 13708; \#iterations: 59982; last prior mass: 1.1212882581520077e-35;
+process 13708; evidence: 4.452277944674931e-39; last likelihood value: 2.1732842745298212e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 97.96399998664856
+process 13708; \#iterations: 62007; last prior mass: 7.535675231816636e-37;
+process 13708; evidence: 2.9337278223434815e-40; last likelihood value: 2.1113204959159622e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 137.55799984931946
+process 12576; \#iterations: 84940; last prior mass: 7.832122403725077e-38;
+process 12576; evidence: 4.5646572347058904e-41; last likelihood value: 2.6497282132524126e-07.
+
+process 13708; simulation completed. \#points: 750; time taken: 100.00699949264526
+process 13708; \#iterations: 63452; last prior mass: 1.0974417332368148e-37;
+process 13708; evidence: 4.711331908250778e-41; last likelihood value: 2.60477809950376e-07.
+
+process 10772; simulation completed. \#points: 2000; time taken: 283.5530002117157
+process 10772; \#iterations: 161534; last prior mass: 5.083822034941614e-36;
+process 10772; evidence: 8.578953951960088e-40; last likelihood value: 3.0567710354123795e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 279.9599997997284
+process 2004; \#iterations: 159495; last prior mass: 1.4091381195912104e-35;
+process 2004; evidence: 1.8129069768853726e-39; last likelihood value: 2.4652079086418434e-08.
+
+process 12576; simulation completed. \#points: 1000; time taken: 137.10999941825867
+process 12576; \#iterations: 84757; last prior mass: 9.404925428245673e-38;
+process 12576; evidence: 1.042210213679234e-40; last likelihood value: 4.7436705730105044e-07.
+
+process 12576; simulation completed. \#points: 1000; time taken: 135.29300093650818
+process 12576; \#iterations: 83167; last prior mass: 4.611939298975168e-37;
+process 12576; evidence: 1.674738085016704e-40; last likelihood value: 1.3312712590301142e-07.
+
+process 17528; simulation completed. \#points: 3500; time taken: 558.6560008525848
+process 17528; \#iterations: 276885; last prior mass: 2.665730835660112e-35;
+process 17528; evidence: 2.5976150708877613e-39; last likelihood value: 9.3690855001355e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 835.1629965305328
+process 17156; \#iterations: 366849; last prior mass: 8.293798516133817e-33;
+process 17156; evidence: 6.912848789413638e-37; last likelihood value: 6.280425433323497e-09.
+
+process 10772; simulation completed. \#points: 2000; time taken: 285.1139998435974
+process 10772; \#iterations: 159894; last prior mass: 1.1542817104378522e-35;
+process 10772; evidence: 1.4128522154413554e-39; last likelihood value: 2.245748008389873e-08.
+
+process 12576; simulation completed. \#points: 1000; time taken: 132.8549997806549
+process 12576; \#iterations: 81663; last prior mass: 2.0752120635993367e-36;
+process 12576; evidence: 3.186516029631821e-40; last likelihood value: 6.136990619774217e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 284.58499908447266
+process 2004; \#iterations: 158505; last prior mass: 2.3116886037775457e-35;
+process 2004; evidence: 1.962445559632773e-39; last likelihood value: 1.779981676004702e-08.
+
+process 12576; simulation completed. \#points: 1000; time taken: 134.83599853515625
+process 12576; \#iterations: 81275; last prior mass: 3.058924390459452e-36;
+process 12576; evidence: 6.060223624018256e-40; last likelihood value: 7.813066326469361e-08.
+
+process 10772; simulation completed. \#points: 2000; time taken: 302.4779996871948
+process 10772; \#iterations: 162949; last prior mass: 2.5056880006509933e-36;
+process 10772; evidence: 4.208201803546538e-40; last likelihood value: 3.736352227742982e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 302.12500047683716
+process 2004; \#iterations: 162257; last prior mass: 3.541545974543092e-36;
+process 2004; evidence: 5.6549259646899e-40; last likelihood value: 2.8526560081884875e-08.
+
+process 17528; simulation completed. \#points: 3500; time taken: 595.3209998607635
+process 17528; \#iterations: 276475; last prior mass: 2.997027942959241e-35;
+process 17528; evidence: 3.536737420495625e-39; last likelihood value: 1.116618543726192e-08.
+
+process 10772; simulation completed. \#points: 2000; time taken: 295.53999972343445
+process 10772; \#iterations: 160435; last prior mass: 8.807145210681272e-36;
+process 10772; evidence: 1.3999990046618945e-39; last likelihood value: 3.1919553826971895e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 294.07200026512146
+process 2004; \#iterations: 157952; last prior mass: 3.0479774965990973e-35;
+process 2004; evidence: 5.177258031299252e-39; last likelihood value: 3.99521374681698e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 291.93999886512756
+process 2004; \#iterations: 161373; last prior mass: 5.509992972665234e-36;
+process 2004; evidence: 3.948339720211294e-39; last likelihood value: 1.3237953368096052e-07.
+
+process 17156; simulation completed. \#points: 5000; time taken: 957.2220001220703
+process 17156; \#iterations: 386200; last prior mass: 1.7296051782481138e-34;
+process 17156; evidence: 9.598410412274819e-39; last likelihood value: 3.965797435229849e-09.
+
+process 10772; simulation completed. \#points: 2000; time taken: 299.6229991912842
+process 10772; \#iterations: 163447; last prior mass: 1.9533841848578738e-36;
+process 10772; evidence: 6.347065515244493e-40; last likelihood value: 6.147042973512122e-08.
+
+process 17528; simulation completed. \#points: 3500; time taken: 580.167001247406
+process 17528; \#iterations: 272622; last prior mass: 9.01129017273723e-35;
+process 17528; evidence: 3.631621198276157e-39; last likelihood value: 4.441121349251178e-09.
+
+process 2004; simulation completed. \#points: 2000; time taken: 293.8729989528656
+process 2004; \#iterations: 160466; last prior mass: 8.671686973231856e-36;
+process 2004; evidence: 7.926153901696638e-40; last likelihood value: 1.88138356696091e-08.
+
+process 10772; simulation completed. \#points: 2000; time taken: 295.0620012283325
+process 10772; \#iterations: 161025; last prior mass: 6.557197804751297e-36;
+process 10772; evidence: 9.932566217587576e-40; last likelihood value: 3.281728430385536e-08.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1800.8269999027252
+process 13708; \#iterations: 570710; last prior mass: 5.436994872732546e-34;
+process 13708; evidence: 1.3271590518941487e-38; last likelihood value: 1.0974294802209806e-09.
+
+process 2004; simulation completed. \#points: 2000; time taken: 292.06499910354614
+process 2004; \#iterations: 160971; last prior mass: 6.736653900952924e-36;
+process 2004; evidence: 8.165840070059674e-40; last likelihood value: 2.3896647053407034e-08.
+
+process 17528; simulation completed. \#points: 3500; time taken: 589.7360000610352
+process 17528; \#iterations: 278131; last prior mass: 1.867271463296758e-35;
+process 17528; evidence: 2.0049495653276596e-39; last likelihood value: 1.0374239183920995e-08.
+
+process 2004; simulation completed. \#points: 2000; time taken: 295.4319996833801
+process 2004; \#iterations: 161618; last prior mass: 4.87472331911402e-36;
+process 2004; evidence: 2.4082415086751538e-39; last likelihood value: 1.0905118302866197e-07.
+
+process 10772; simulation completed. \#points: 3500; time taken: 588.3639996051788
+process 10772; \#iterations: 276554; last prior mass: 2.9301384760509557e-35;
+process 10772; evidence: 1.9868696942140697e-39; last likelihood value: 6.815434409942034e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 949.3760001659393
+process 17156; \#iterations: 384153; last prior mass: 2.6046365929233997e-34;
+process 17156; evidence: 1.7935489672223886e-38; last likelihood value: 4.310173498343969e-09.
+
+process 12576; simulation completed. \#points: 7500; time taken: 1820.5180008411407
+process 12576; \#iterations: 568285; last prior mass: 7.512436358898824e-34;
+process 12576; evidence: 1.5349757003936607e-38; last likelihood value: 7.883474343631749e-10.
+
+process 17528; simulation completed. \#points: 3500; time taken: 608.0810010433197
+process 17528; \#iterations: 278413; last prior mass: 1.7227241158153978e-35;
+process 17528; evidence: 1.6737704891432165e-39; last likelihood value: 1.0471608880765234e-08.
+
+process 10772; simulation completed. \#points: 3500; time taken: 602.7220005989075
+process 10772; \#iterations: 273205; last prior mass: 7.628618949450668e-35;
+process 10772; evidence: 3.719866122879666e-39; last likelihood value: 5.498222961581798e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 967.2890026569366
+process 17156; \#iterations: 373520; last prior mass: 2.184327648425955e-33;
+process 17156; evidence: 8.908552873531662e-38; last likelihood value: 2.3571624137439464e-09.
+
+process 17528; simulation completed. \#points: 3500; time taken: 597.2629995346069
+process 17528; \#iterations: 275239; last prior mass: 4.266372647229034e-35;
+process 17528; evidence: 2.1290460746088466e-39; last likelihood value: 5.27028881140346e-09.
+
+process 10772; simulation completed. \#points: 3500; time taken: 599.8950009346008
+process 10772; \#iterations: 276217; last prior mass: 3.2262981540700836e-35;
+process 10772; evidence: 4.511319155156853e-39; last likelihood value: 1.3029350877097855e-08.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1876.1600024700165
+process 13708; \#iterations: 567636; last prior mass: 8.191468303210798e-34;
+process 13708; evidence: 2.317758877306354e-38; last likelihood value: 1.1340265585181343e-09.
+
+process 17528; simulation completed. \#points: 3500; time taken: 604.8770005702972
+process 17528; \#iterations: 275382; last prior mass: 4.095573786202842e-35;
+process 17528; evidence: 2.9889294375096585e-39; last likelihood value: 7.185349992198843e-09.
+
+process 10772; simulation completed. \#points: 3500; time taken: 605.51899933815
+process 10772; \#iterations: 275339; last prior mass: 4.1462011957186774e-35;
+process 10772; evidence: 2.7425807091591937e-39; last likelihood value: 7.272742704491065e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 996.5559980869293
+process 17156; \#iterations: 389754; last prior mass: 8.496703415438542e-35;
+process 17156; evidence: 4.070022531090572e-39; last likelihood value: 3.3957926715655084e-09.
+
+process 12576; simulation completed. \#points: 7500; time taken: 1908.6359989643097
+process 12576; \#iterations: 565416; last prior mass: 1.1013184674302525e-33;
+process 12576; evidence: 2.0275312082280807e-38; last likelihood value: 6.524872338183228e-10.
+
+process 17528; simulation completed. \#points: 3500; time taken: 605.8600008487701
+process 17528; \#iterations: 278494; last prior mass: 1.683313157792138e-35;
+process 17528; evidence: 1.2164356128286298e-39; last likelihood value: 6.9392978216280805e-09.
+
+process 10772; simulation completed. \#points: 3500; time taken: 602.0549998283386
+process 10772; \#iterations: 277448; last prior mass: 2.2696397351926996e-35;
+process 10772; evidence: 6.768654799696619e-39; last likelihood value: 2.148328571165011e-08.
+
+process 17528; simulation completed. \#points: 3500; time taken: 607.0629990100861
+process 17528; \#iterations: 277735; last prior mass: 2.090955444376024e-35;
+process 17528; evidence: 1.8486798431082173e-39; last likelihood value: 9.270984374813438e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 2998.622997522354
+process 2004; \#iterations: 741146; last prior mass: 3.938138181278223e-33;
+process 2004; evidence: 4.12004688812623e-38; last likelihood value: 2.9640725086382137e-10.
+
+process 10772; simulation completed. \#points: 3500; time taken: 603.5489993095398
+process 10772; \#iterations: 273972; last prior mass: 6.127359881958979e-35;
+process 10772; evidence: 5.936871291042298e-39; last likelihood value: 1.0241464873074928e-08.
+
+process 17156; simulation completed. \#points: 5000; time taken: 991.9609994888306
+process 17156; \#iterations: 386532; last prior mass: 1.6184892651941794e-34;
+process 17156; evidence: 1.0034222810900224e-38; last likelihood value: 4.324994321647908e-09.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1856.3070006370544
+process 13708; \#iterations: 559260; last prior mass: 2.502544636480249e-33;
+process 13708; evidence: 5.823412435802949e-38; last likelihood value: 9.700954242452791e-10.
+
+process 17528; simulation completed. \#points: 3500; time taken: 612.7220003604889
+process 17528; \#iterations: 277121; last prior mass: 2.491910495042442e-35;
+process 17528; evidence: 5.6961949434902546e-39; last likelihood value: 2.6920552527658102e-08.
+
+process 12576; simulation completed. \#points: 7500; time taken: 1863.8190004825592
+process 12576; \#iterations: 564078; last prior mass: 1.3164096501905098e-33;
+process 12576; evidence: 2.2800325570278178e-38; last likelihood value: 7.485115460215814e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 990.9790003299713
+process 17156; \#iterations: 382842; last prior mass: 3.385471412464393e-34;
+process 17156; evidence: 8.269054283830147e-39; last likelihood value: 1.783181791981703e-09.
+
+process 17528; simulation completed. \#points: 3500; time taken: 616.5270004272461
+process 17528; \#iterations: 276022; last prior mass: 3.4111507010583137e-35;
+process 17528; evidence: 3.466435585971947e-39; last likelihood value: 8.897072728222142e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1032.4430005550385
+process 17156; \#iterations: 390520; last prior mass: 7.289815629272321e-35;
+process 17156; evidence: 3.140422453691703e-39; last likelihood value: 3.0908796347444745e-09.
+
+process 17528; simulation completed. \#points: 5000; time taken: 1018.3940019607544
+process 17528; \#iterations: 386408; last prior mass: 1.6591296568938784e-34;
+process 17528; evidence: 8.86934028177477e-39; last likelihood value: 3.455336838031722e-09.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1897.5869987010956
+process 13708; \#iterations: 570788; last prior mass: 5.380743142070234e-34;
+process 13708; evidence: 1.0483200794753806e-38; last likelihood value: 7.733686008703681e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1002.1679999828339
+process 17156; \#iterations: 383608; last prior mass: 2.9045926647498253e-34;
+process 17156; evidence: 9.279249797406366e-39; last likelihood value: 2.38774454065207e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 3112.671000480652
+process 2004; \#iterations: 741958; last prior mass: 3.630999914204203e-33;
+process 2004; evidence: 3.9803014945866644e-38; last likelihood value: 2.950162427868733e-10.
+
+process 17528; simulation completed. \#points: 5000; time taken: 1018.1949989795685
+process 17528; \#iterations: 390653; last prior mass: 7.098462808714178e-35;
+process 17528; evidence: 8.11454085266833e-39; last likelihood value: 6.7845372954180545e-09.
+
+process 12576; simulation completed. \#points: 10000; time taken: 3028.715000629425
+process 12576; \#iterations: 738695; last prior mass: 5.0319524448325146e-33;
+process 12576; evidence: 8.282442180266226e-38; last likelihood value: 4.181384834995684e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1048.2260012626648
+process 17156; \#iterations: 392908; last prior mass: 4.521655802691961e-35;
+process 17156; evidence: 8.834781018552692e-39; last likelihood value: 1.4796926556609417e-08.
+
+process 17528; simulation completed. \#points: 5000; time taken: 1023.9809992313385
+process 17528; \#iterations: 387443; last prior mass: 1.3489050129318492e-34;
+process 17528; evidence: 1.312521476609103e-38; last likelihood value: 4.1718387964250776e-09.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1926.2080025672913
+process 13708; \#iterations: 569587; last prior mass: 6.315202542107031e-34;
+process 13708; evidence: 1.7173595103579214e-38; last likelihood value: 8.900603783843029e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1027.3109986782074
+process 17156; \#iterations: 387874; last prior mass: 1.2374999335918522e-34;
+process 17156; evidence: 6.177856282619022e-39; last likelihood value: 3.605475851717864e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 3041.623999595642
+process 2004; \#iterations: 736618; last prior mass: 6.193547775551242e-33;
+process 2004; evidence: 4.40094377190974e-38; last likelihood value: 1.9517620127322912e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1035.7799999713898
+process 17156; \#iterations: 390708; last prior mass: 7.020807604463461e-35;
+process 17156; evidence: 1.0074716304854778e-38; last likelihood value: 1.0172145975156665e-08.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1923.177000284195
+process 13708; \#iterations: 568286; last prior mass: 7.511434767491848e-34;
+process 13708; evidence: 2.594687429853416e-38; last likelihood value: 1.3435577965169248e-09.
+
+process 12576; simulation completed. \#points: 10000; time taken: 3112.579998731613
+process 12576; \#iterations: 742101; last prior mass: 3.579446103693166e-33;
+process 12576; evidence: 7.101248468167128e-38; last likelihood value: 5.731120624918215e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1019.7130010128021
+process 17156; \#iterations: 386430; last prior mass: 1.6518455232492887e-34;
+process 17156; evidence: 4.121388843278003e-39; last likelihood value: 1.8003404730201475e-09.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1940.9110009670258
+process 13708; \#iterations: 562989; last prior mass: 1.5221260410706403e-33;
+process 13708; evidence: 2.438930447889372e-38; last likelihood value: 6.49048564175853e-10.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1028.922001361847
+process 17156; \#iterations: 384553; last prior mass: 2.404382615324388e-34;
+process 17156; evidence: 1.5158113127961512e-38; last likelihood value: 4.6394856271414034e-09.
+
+process 17156; simulation completed. \#points: 5000; time taken: 1031.1789999008179
+process 17156; \#iterations: 390273; last prior mass: 7.65897570465005e-35;
+process 17156; evidence: 4.32409461607098e-39; last likelihood value: 3.558866740832835e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 3091.854001522064
+process 2004; \#iterations: 743272; last prior mass: 3.183903847267104e-33;
+process 2004; evidence: 2.765060808943205e-38; last likelihood value: 2.312819440709445e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1937.279001235962
+process 13708; \#iterations: 569110; last prior mass: 6.72989692954433e-34;
+process 13708; evidence: 2.994287142677094e-38; last likelihood value: 1.8383666696463095e-09.
+
+process 12576; simulation completed. \#points: 10000; time taken: 3081.443000793457
+process 12576; \#iterations: 736320; last prior mass: 6.380893080332026e-33;
+process 12576; evidence: 6.680781985106087e-38; last likelihood value: 2.628260005483473e-10.
+
+process 10772; simulation completed. \#points: 20000; time taken: 10820.549998998642
+process 10772; \#iterations: 1412370; last prior mass: 1.2990560467289793e-31;
+process 10772; evidence: 1.6428391627392334e-37; last likelihood value: 1.0996512906044554e-11.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1881.0900003910065
+process 13708; \#iterations: 571586; last prior mass: 4.837637564854939e-34;
+process 13708; evidence: 1.2201017913303199e-38; last likelihood value: 1.1270673316993088e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 3001.575999736786
+process 2004; \#iterations: 739004; last prior mass: 4.878842840035902e-33;
+process 2004; evidence: 3.405796192991081e-38; last likelihood value: 2.02281054653659e-10.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2938.5119993686676
+process 12576; \#iterations: 738822; last prior mass: 4.9684507381342606e-33;
+process 12576; evidence: 4.913550003281568e-38; last likelihood value: 2.815649465550954e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1835.4879987239838
+process 13708; \#iterations: 566869; last prior mass: 9.073515889810943e-34;
+process 13708; evidence: 2.2627351789330018e-38; last likelihood value: 1.0961259549873014e-09.
+
+process 2004; simulation completed. \#points: 10000; time taken: 2964.460998773575
+process 2004; \#iterations: 738104; last prior mass: 5.3383043698065954e-33;
+process 2004; evidence: 4.2656658618106377e-38; last likelihood value: 2.1556820621568662e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1876.4660003185272
+process 13708; \#iterations: 572931; last prior mass: 4.043429272702439e-34;
+process 13708; evidence: 1.2365941953049845e-38; last likelihood value: 8.345876451391576e-10.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2971.8409996032715
+process 12576; \#iterations: 742118; last prior mass: 3.573366214686784e-33;
+process 12576; evidence: 3.607608762056031e-38; last likelihood value: 2.8598699683251573e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1827.1016585826874
+process 13708; \#iterations: 560491; last prior mass: 2.1237316115183783e-33;
+process 13708; evidence: 3.968937029537305e-38; last likelihood value: 7.908889797669784e-10.
+
+process 12576; simulation completed. \#points: 10000; time taken: 3021.2684166431427
+process 12576; \#iterations: 735750; last prior mass: 6.755169535005953e-33;
+process 12576; evidence: 4.292111414494843e-38; last likelihood value: 1.7410574812886001e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1893.0737586021423
+process 13708; \#iterations: 564445; last prior mass: 1.2535439946784794e-33;
+process 13708; evidence: 2.1153677952109643e-38; last likelihood value: 6.21359024324395e-10.
+
+process 10772; simulation completed. \#points: 20000; time taken: 10332.139901161194
+process 10772; \#iterations: 1411957; last prior mass: 1.326160443840561e-31;
+process 10772; evidence: 1.1740500264049254e-37; last likelihood value: 9.020616137093218e-12.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1877.0864827632904
+process 13708; \#iterations: 573792; last prior mass: 3.6048968662488866e-34;
+process 13708; evidence: 1.6740167823685362e-38; last likelihood value: 2.0202285157310435e-09.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2992.5804839134216
+process 12576; \#iterations: 735052; last prior mass: 7.243525742024553e-33;
+process 12576; evidence: 7.09985278702148e-38; last likelihood value: 2.7012511435299337e-10.
+
+process 13708; simulation completed. \#points: 7500; time taken: 1869.0365974903107
+process 13708; \#iterations: 562561; last prior mass: 1.611515008286561e-33;
+process 13708; evidence: 3.0170524351476734e-38; last likelihood value: 7.85043800306394e-10.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2967.5784752368927
+process 12576; \#iterations: 742250; last prior mass: 3.5265077270545646e-33;
+process 12576; evidence: 8.131501379651604e-38; last likelihood value: 5.91947558151252e-10.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9947.425354719162
+process 2004; \#iterations: 1372897; last prior mass: 9.349172931045524e-31;
+process 2004; evidence: 8.834635722622729e-37; last likelihood value: 7.735044809434429e-12.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2883.6724033355713
+process 12576; \#iterations: 737897; last prior mass: 5.449958907854469e-33;
+process 12576; evidence: 6.543225383023607e-38; last likelihood value: 3.0186436711923025e-10.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2913.2227745056152
+process 12576; \#iterations: 746638; last prior mass: 2.27392649067069e-33;
+process 12576; evidence: 2.8429730660340525e-38; last likelihood value: 3.3119450697249327e-10.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9961.701630592346
+process 10772; \#iterations: 1408565; last prior mass: 1.57127577168587e-31;
+process 10772; evidence: 9.419266962112074e-38; last likelihood value: 4.8270831871542356e-12.
+
+process 17528; simulation completed. \#points: 35000; time taken: 28752.218250751495
+process 17528; \#iterations: 2327161; last prior mass: 8.062619503141218e-30;
+process 17528; evidence: 2.7026164628692376e-37; last likelihood value: 1.0483054715658473e-13.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2982.990527868271
+process 12576; \#iterations: 744178; last prior mass: 2.9081236191839927e-33;
+process 12576; evidence: 3.49458666035704e-38; last likelihood value: 2.715527549658874e-10.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9944.13338804245
+process 2004; \#iterations: 1404023; last prior mass: 1.9718809473180106e-31;
+process 2004; evidence: 1.1710831692389354e-37; last likelihood value: 5.4650429128959586e-12.
+
+process 12576; simulation completed. \#points: 10000; time taken: 2949.645050048828
+process 12576; \#iterations: 745119; last prior mass: 2.6469500927639597e-33;
+process 12576; evidence: 3.250173758922509e-38; last likelihood value: 3.036873783189072e-10.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9800.817112445831
+process 10772; \#iterations: 1405670; last prior mass: 1.8160029103898729e-31;
+process 10772; evidence: 1.8133288412874368e-37; last likelihood value: 8.612405921979621e-12.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9432.890921354294
+process 2004; \#iterations: 1401893; last prior mass: 2.193476839375354e-31;
+process 2004; evidence: 2.4682044944679052e-37; last likelihood value: 9.38832015821711e-12.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9358.56501531601
+process 10772; \#iterations: 1399864; last prior mass: 2.4276844038655746e-31;
+process 10772; evidence: 2.023545987530001e-37; last likelihood value: 7.553905336944122e-12.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9802.782749176025
+process 2004; \#iterations: 1424771; last prior mass: 6.987850343363649e-32;
+process 2004; evidence: 2.010961511979487e-37; last likelihood value: 2.5920761872893398e-11.
+
+process 17528; simulation completed. \#points: 35000; time taken: 26778.025418043137
+process 17528; \#iterations: 2317332; last prior mass: 1.0676735003773262e-29;
+process 17528; evidence: 7.968326531838342e-37; last likelihood value: 1.312227748760497e-13.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9767.751996040344
+process 10772; \#iterations: 1412869; last prior mass: 1.267045589350796e-31;
+process 10772; evidence: 1.3433197188569164e-37; last likelihood value: 1.0511990633415924e-11.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9485.602407217026
+process 2004; \#iterations: 1403429; last prior mass: 2.0313241739095087e-31;
+process 2004; evidence: 1.538755854482738e-37; last likelihood value: 7.356006875725166e-12.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9471.621087551117
+process 10772; \#iterations: 1409953; last prior mass: 1.4659271113405632e-31;
+process 10772; evidence: 1.623794206404198e-37; last likelihood value: 1.105598369021755e-11.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9383.308130025864
+process 2004; \#iterations: 1410142; last prior mass: 1.4521393499177603e-31;
+process 2004; evidence: 1.0578828706085264e-37; last likelihood value: 6.641520157374478e-12.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9485.300025701523
+process 10772; \#iterations: 1417574; last prior mass: 1.001438917064567e-31;
+process 10772; evidence: 1.0497125211069937e-37; last likelihood value: 8.847903540467157e-12.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9575.624829530716
+process 2004; \#iterations: 1412999; last prior mass: 1.2588365014584727e-31;
+process 2004; evidence: 1.839146067051819e-37; last likelihood value: 1.1496018434729619e-11.
+
+process 17528; simulation completed. \#points: 35000; time taken: 26958.316119909286
+process 17528; \#iterations: 2330266; last prior mass: 7.378159508316986e-30;
+process 17528; evidence: 5.773960691882106e-37; last likelihood value: 1.4032331162910172e-13.
+
+process 10772; simulation completed. \#points: 20000; time taken: 9453.590998888016
+process 10772; \#iterations: 1412362; last prior mass: 1.2995757730860113e-31;
+process 10772; evidence: 1.1391643988030433e-37; last likelihood value: 7.704378231007496e-12.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9381.597998857498
+process 2004; \#iterations: 1423187; last prior mass: 7.563794451193109e-32;
+process 2004; evidence: 1.1446935826771478e-37; last likelihood value: 1.3862949292946687e-11.
+
+process 2004; simulation completed. \#points: 20000; time taken: 9298.036000728607
+process 2004; \#iterations: 1393532; last prior mass: 3.331883910180457e-31;
+process 2004; evidence: 2.550824065874736e-37; last likelihood value: 5.444078999127425e-12.
+
