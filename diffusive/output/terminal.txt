@@ -1,0 +1,1088 @@
+process 2557963; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.067550271541654e-46; time taken: 14.698914766311646
+
+process 2557964; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.499466826737399e-44; time taken: 23.908303022384644
+
+process 2557968; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.44033403876671e-45; time taken: 24.510529041290283
+
+process 2557965; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1179537583726284e-44; time taken: 25.241693258285522
+
+process 2557967; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.2656331772504476e-45; time taken: 25.503060579299927
+
+process 2557961; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.7622930015329503e-40; time taken: 25.924625158309937
+
+process 2557962; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1980003618896617e-41; time taken: 26.908119440078735
+
+process 2557958; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3954664005295208e-49; time taken: 28.82647943496704
+
+process 2557959; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.62664595031372e-44; time taken: 28.852920055389404
+
+process 2557970; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.748976610621124e-42; time taken: 28.890877962112427
+
+process 2557960; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.195164250411873e-44; time taken: 30.572377920150757
+
+process 2557966; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.933090501637555e-45; time taken: 31.609403133392334
+
+process 2557971; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2262935003852492e-42; time taken: 33.01252627372742
+
+process 2557973; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.862149380381066e-43; time taken: 38.282477617263794
+
+process 2557969; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.161494932853969e-45; time taken: 38.562755823135376
+
+process 2557963; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.1183596882889e-45; time taken: 27.03809428215027
+
+process 2557972; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4987430189770262e-42; time taken: 42.10265231132507
+
+process 2557964; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.578222450615834e-44; time taken: 22.972188711166382
+
+process 2557967; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.7317133629474623e-46; time taken: 23.09906268119812
+
+process 2557962; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.3388243975990867e-44; time taken: 22.80916738510132
+
+process 2557959; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.0231948702720205e-45; time taken: 21.71303653717041
+
+process 2557965; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1535524578556794e-41; time taken: 26.143980503082275
+
+process 2557961; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.935642325798858e-42; time taken: 26.610220909118652
+
+process 2557958; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8170998783576238e-44; time taken: 26.53848671913147
+
+process 2557960; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.104804113956735e-45; time taken: 28.484389305114746
+
+process 2557968; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.329324412397147e-43; time taken: 38.50452780723572
+
+process 2557971; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.3466002139736494e-42; time taken: 30.656009435653687
+
+process 2557963; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.725026929217167e-42; time taken: 23.613255500793457
+
+process 2557966; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1483462728157275e-44; time taken: 34.074522733688354
+
+process 2557970; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.427640956720043e-43; time taken: 39.89684820175171
+
+process 2557959; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.447079787448322e-40; time taken: 19.000021934509277
+
+process 2557958; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.219804402047164e-45; time taken: 18.55386185646057
+
+process 2557962; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0810715484706797e-42; time taken: 24.628236293792725
+
+process 2557965; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.167978949119148e-43; time taken: 23.5789635181427
+
+process 2557961; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.7866020707509385e-43; time taken: 22.935383319854736
+
+process 2557978; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.871465476583526e-45; time taken: 75.7205421924591
+
+process 2557969; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.4907081762601208e-37; time taken: 38.797651290893555
+
+process 2557964; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.182869119427399e-46; time taken: 31.759544134140015
+
+process 2557967; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.1809259658283755e-43; time taken: 32.938135385513306
+
+process 2557977; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.096044533724679e-42; time taken: 86.52923655509949
+
+process 2557966; simulation completed. \#points per level: 750;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8052703661751346e-44; time taken: 20.942622184753418
+
+process 2557960; simulation completed. \#points per level: 500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.246411517662381e-45; time taken: 28.409015893936157
+
+process 2557973; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.9004956197115853e-39; time taken: 50.50102519989014
+
+process 2557974; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.169999043733919e-42; time taken: 90.980783700943
+
+process 2557971; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.934209365362841e-41; time taken: 29.30397129058838
+
+process 2557972; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.775832638052575e-42; time taken: 54.474164962768555
+
+process 2557968; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.605344791091044e-43; time taken: 35.343820571899414
+
+process 2557979; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.1553643376991774e-41; time taken: 101.40880155563354
+
+process 2557975; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.55715345794931e-41; time taken: 102.88952875137329
+
+process 2557969; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2057598511031789e-42; time taken: 29.06341528892517
+
+process 2557976; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.5094139790548396e-42; time taken: 107.84334945678711
+
+process 2557981; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.77763604125588e-44; time taken: 115.84115695953369
+
+process 2557973; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.25958403039716e-41; time taken: 30.062775373458862
+
+process 2557970; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.09040682234028e-44; time taken: 52.54863882064819
+
+process 2557980; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3513434578865908e-42; time taken: 126.3150942325592
+
+process 2557972; simulation completed. \#points per level: 1000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.7375024443192555e-43; time taken: 38.975810527801514
+
+process 2557978; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5363585193379852e-42; time taken: 69.57914352416992
+
+process 2557977; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.9039122182106716e-43; time taken: 67.92181539535522
+
+process 2557975; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2045751000137823e-40; time taken: 72.22788190841675
+
+process 2557974; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.558860882772023e-39; time taken: 87.95953369140625
+
+process 2557976; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.998538747050351e-40; time taken: 74.73919796943665
+
+process 2557959; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.385826567490133e-41; time taken: 123.65585327148438
+
+process 2557958; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.42254979799155e-42; time taken: 121.9088728427887
+
+process 2557978; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.6938473956039274e-42; time taken: 71.93923163414001
+
+process 2557979; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.102656223055936e-43; time taken: 118.53821396827698
+
+process 2557963; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.64564261214579e-43; time taken: 156.72199034690857
+
+process 2557977; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.977267337951037e-43; time taken: 86.66398644447327
+
+process 2557962; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.7875414495418905e-43; time taken: 166.66738867759705
+
+process 2557965; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.41564285183758e-42; time taken: 171.2875783443451
+
+process 2557976; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.9848470349384582e-42; time taken: 64.89087104797363
+
+process 2557974; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.230798198402105e-43; time taken: 78.0923843383789
+
+process 2557964; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.652448076709142e-41; time taken: 181.9292824268341
+
+process 2557980; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.600151653574305e-42; time taken: 137.16945695877075
+
+process 2557981; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3084929333712451e-39; time taken: 149.0148093700409
+
+process 2557975; simulation completed. \#points per level: 2000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.775811839024624e-44; time taken: 96.020263671875
+
+process 2557961; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.2710751819665515e-41; time taken: 212.7511327266693
+
+process 2557967; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.828925598334157e-41; time taken: 218.12923550605774
+
+process 2557959; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8663403115989215e-41; time taken: 117.93042373657227
+
+process 2557958; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.762691131832908e-41; time taken: 140.48431396484375
+
+process 2557963; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.795470975625173e-43; time taken: 143.03826713562012
+
+process 2557966; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.947636999979658e-40; time taken: 290.5441734790802
+
+process 2557971; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0784137821393926e-41; time taken: 285.36281394958496
+
+process 2557980; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.3684724917560834e-42; time taken: 115.33212304115295
+
+process 2557969; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.558369848143487e-42; time taken: 272.5145161151886
+
+process 2557960; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.307600884033463e-42; time taken: 302.5895583629608
+
+process 2557979; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.074764353609333e-41; time taken: 185.57082843780518
+
+process 2557973; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.685536896843983e-42; time taken: 291.2744872570038
+
+process 2557959; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2226722611648773e-42; time taken: 111.82664799690247
+
+process 2557968; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.306765092631962e-41; time taken: 330.39677333831787
+
+process 2557962; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.175839968189668e-43; time taken: 195.07327437400818
+
+process 2557965; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4757308194913282e-43; time taken: 192.77604389190674
+
+process 2557964; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.783250945534633e-41; time taken: 187.5717957019806
+
+process 2557981; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.067581402202131e-41; time taken: 184.5949022769928
+
+process 2557961; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.7298973462614105e-42; time taken: 170.3515088558197
+
+process 2557963; simulation completed. \#points per level: 3500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1302285313394052e-41; time taken: 114.1937313079834
+
+process 2557970; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.025088537128652e-41; time taken: 360.2706809043884
+
+process 2557972; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.167244534178006e-42; time taken: 377.51901507377625
+
+process 2557967; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.141095323622308e-42; time taken: 244.25397086143494
+
+process 2557978; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.425146416912988e-42; time taken: 333.5109086036682
+
+process 2557958; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0041594053444634e-41; time taken: 249.7791268825531
+
+process 2557962; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.064009045728546e-42; time taken: 166.0014591217041
+
+process 2557961; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.4521340562278716e-40; time taken: 151.03269696235657
+
+process 2557965; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.206458320821784e-40; time taken: 171.84400367736816
+
+process 2557977; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.8624112969359613e-42; time taken: 372.9294855594635
+
+process 2557960; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.393645583563148e-41; time taken: 233.45863699913025
+
+process 2557969; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.860649867322892e-41; time taken: 246.40494894981384
+
+process 2557976; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.18223663848117e-42; time taken: 432.4356527328491
+
+process 2557971; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.4072358170668885e-40; time taken: 306.36409282684326
+
+process 2557964; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.766258519438747e-42; time taken: 245.66290712356567
+
+process 2557968; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.596668945685747e-42; time taken: 282.10956287384033
+
+process 2557967; simulation completed. \#points per level: 5000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.764932683504547e-41; time taken: 189.78192472457886
+
+process 2557966; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.201343993814036e-41; time taken: 363.0808584690094
+
+process 2557970; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2105151961379328e-41; time taken: 323.5530581474304
+
+process 2557973; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3636000892802573e-41; time taken: 400.3463513851166
+
+process 2557960; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.7522288083256605e-42; time taken: 246.44641017913818
+
+process 2557969; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.270344177529842e-41; time taken: 276.9225580692291
+
+process 2557972; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.699173778506673e-42; time taken: 427.57313227653503
+
+process 2557978; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0049044882022585e-41; time taken: 390.49750566482544
+
+process 2557974; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.125977556464039e-41; time taken: 685.948534488678
+
+process 2557968; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.561701386413859e-42; time taken: 239.93007707595825
+
+process 2557977; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3513867886083706e-41; time taken: 382.83426809310913
+
+process 2557971; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.874186941181097e-41; time taken: 312.5086407661438
+
+process 2557966; simulation completed. \#points per level: 7500;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.5401051511721054e-42; time taken: 282.1931002140045
+
+process 2557976; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4229711088717796e-40; time taken: 346.95892453193665
+
+process 2557975; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.0054283109703645e-41; time taken: 808.8308758735657
+
+process 2557979; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.016289962592937e-40; time taken: 756.1223511695862
+
+process 2557980; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.044459505557371e-41; time taken: 785.938905954361
+
+process 2557959; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.9496041043652506e-42; time taken: 755.2220659255981
+
+process 2557973; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.317596528318263e-41; time taken: 372.09323954582214
+
+process 2557970; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.342968921755438e-41; time taken: 384.9986765384674
+
+process 2557972; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.7080981293479166e-39; time taken: 375.7741889953613
+
+process 2557978; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.0317570506744537e-41; time taken: 413.35317516326904
+
+process 2557977; simulation completed. \#points per level: 10000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.1480004289936165e-41; time taken: 385.185409784317
+
+process 2557981; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.174360756871863e-41; time taken: 1285.1009652614594
+
+process 2557974; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1803927167917574e-41; time taken: 806.9308733940125
+
+process 2557976; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.697833295519485e-41; time taken: 730.7695710659027
+
+process 2557963; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.8251000024211527e-41; time taken: 1321.5901935100555
+
+process 2557975; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.282415197906176e-41; time taken: 759.8480703830719
+
+process 2557962; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2783536501085502e-41; time taken: 1253.508644104004
+
+process 2557980; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5907554787441475e-41; time taken: 716.6967084407806
+
+process 2557961; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.103650388608399e-41; time taken: 1307.6770043373108
+
+process 2557959; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.227645476338309e-41; time taken: 741.0514886379242
+
+process 2557979; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.627996461937521e-41; time taken: 822.9418733119965
+
+process 2557965; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1706021945240424e-41; time taken: 1381.4612364768982
+
+process 2557958; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.306917329741094e-41; time taken: 1465.366399526596
+
+process 2557974; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.022356238322629e-41; time taken: 777.0443625450134
+
+process 2557975; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.210283649271666e-41; time taken: 710.7866871356964
+
+process 2557964; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.0828980556045416e-41; time taken: 1862.5190260410309
+
+process 2557980; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.392925389877358e-41; time taken: 753.2517447471619
+
+process 2557960; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.0092000681321996e-41; time taken: 1795.6493647098541
+
+process 2557967; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.3220667885122107e-41; time taken: 1950.2454352378845
+
+process 2557959; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.885367625309319e-42; time taken: 815.8527319431305
+
+process 2557979; simulation completed. \#points per level: 20000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.1389467524108097e-41; time taken: 770.3162343502045
+
+process 2557969; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.9482108865482095e-41; time taken: 1909.3684976100922
+
+process 2557968; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.6465422922847173e-41; time taken: 1901.6217653751373
+
+process 2557981; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.926232894341018e-41; time taken: 1306.7201449871063
+
+process 2557963; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.7951520338199996e-41; time taken: 1265.7080936431885
+
+process 2557962; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.789574864747962e-42; time taken: 1350.2045874595642
+
+process 2557958; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5096408127487247e-41; time taken: 1250.633557319641
+
+process 2557961; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.740535838240013e-41; time taken: 1402.2051322460175
+
+process 2557966; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.154520751966244e-41; time taken: 2788.611366033554
+
+process 2557971; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.101081594535374e-41; time taken: 2817.533233165741
+
+process 2557965; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.50684408987957e-41; time taken: 1853.1849884986877
+
+process 2557970; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.888592410854629e-41; time taken: 2754.5533945560455
+
+process 2557972; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2373661298442427e-41; time taken: 2797.69765996933
+
+process 2557973; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.961688530395272e-41; time taken: 2978.1014182567596
+
+process 2557963; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.673558841302399e-41; time taken: 1268.2655601501465
+
+process 2557981; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.073323080449306e-41; time taken: 1327.0671899318695
+
+process 2557960; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8873928498524822e-41; time taken: 1702.793774843216
+
+process 2557964; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.6040713147446347e-41; time taken: 1813.6721992492676
+
+process 2557962; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0533460318282791e-41; time taken: 1218.0626242160797
+
+process 2557967; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5365937605420768e-41; time taken: 1815.3467478752136
+
+process 2557958; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.441257308710576e-41; time taken: 1245.732190132141
+
+process 2557961; simulation completed. \#points per level: 35000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4663053642731872e-41; time taken: 1239.9494247436523
+
+process 2557969; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.6061110810824422e-41; time taken: 1771.769546508789
+
+process 2557968; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5669056481137397e-41; time taken: 1763.6936676502228
+
+process 2557977; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.133955460596896e-42; time taken: 3616.942010164261
+
+process 2557978; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.700520306430618e-41; time taken: 3674.9290986061096
+
+process 2557976; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.618063574484058e-41; time taken: 3436.11501789093
+
+process 2557965; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.162041968783081e-42; time taken: 1605.4059798717499
+
+process 2557974; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.253991001738846e-41; time taken: 3330.422089576721
+
+process 2557964; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5478146103998838e-41; time taken: 1517.970953464508
+
+process 2557975; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.1927373904407735e-41; time taken: 3333.079265356064
+
+process 2557960; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.294426443629039e-42; time taken: 1542.9439489841461
+
+process 2557980; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.974377946150767e-41; time taken: 3279.9958543777466
+
+process 2557967; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.590342566986715e-41; time taken: 1499.1696355342865
+
+process 2557969; simulation completed. \#points per level: 50000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2087242590849886e-41; time taken: 1515.9068970680237
+
+process 2557971; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.961351751581569e-41; time taken: 2304.4314284324646
+
+process 2557966; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.928238181024572e-41; time taken: 2317.359986305237
+
+process 2557970; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.6960645578567646e-41; time taken: 2314.533984899521
+
+process 2557972; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.812732912370305e-41; time taken: 2247.0422837734222
+
+process 2557973; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.4489435538063935e-41; time taken: 2217.404040813446
+
+process 2557968; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8455271433931522e-41; time taken: 2132.4821672439575
+
+process 2557977; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.208960628754395e-41; time taken: 2775.4058170318604
+
+process 2557978; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.985663785912023e-41; time taken: 2750.2702531814575
+
+process 2557976; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.149923934078801e-41; time taken: 2731.271318912506
+
+process 2557966; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.640443460977684e-41; time taken: 1958.078060388565
+
+process 2557971; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.035348155262329e-41; time taken: 1974.7828078269958
+
+process 2557970; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.60509478827625e-41; time taken: 1955.8186876773834
+
+process 2557972; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.3171282825540695e-41; time taken: 1960.1962325572968
+
+process 2557973; simulation completed. \#points per level: 75000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.2981081022787315e-41; time taken: 1969.4347307682037
+
+process 2557974; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4209375684022746e-41; time taken: 2628.503364086151
+
+process 2557975; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.9944247463031376e-41; time taken: 2630.4007439613342
+
+process 2557978; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.917101048856446e-41; time taken: 2594.2266476154327
+
+process 2557977; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.788052463286019e-41; time taken: 2600.1521458625793
+
+process 2557976; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2758689976499722e-41; time taken: 2602.417327404022
+
+process 2557974; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.332488009720262e-41; time taken: 2599.3884494304657
+
+process 2557975; simulation completed. \#points per level: 100000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.774579159624445e-41; time taken: 2602.921238183975
+
+process 2632995; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.273055046403858e-42; time taken: 7488.835126161575
+
+process 2632988; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.41614959404323e-42; time taken: 7494.53468132019
+
+process 2632987; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4136551558983318e-41; time taken: 7517.725742340088
+
+process 2632998; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.565093816298022e-41; time taken: 7517.815485954285
+
+process 2633001; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.749059002196412e-42; time taken: 7529.117498397827
+
+process 2632996; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.018873123850009e-42; time taken: 7555.530579328537
+
+process 2632989; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.806508305143988e-42; time taken: 7556.891461610794
+
+process 2632992; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.292377132933076e-42; time taken: 7563.974026918411
+
+process 2633000; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.508734931466977e-42; time taken: 7567.517667531967
+
+process 2633002; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 4.25583668555639e-42; time taken: 7599.0461394786835
+
+process 2632990; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.380735215831072e-42; time taken: 7611.558354139328
+
+process 2632997; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.746479172628429e-42; time taken: 7622.042532444
+
+process 2632993; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.128210828695434e-42; time taken: 7626.712282657623
+
+process 2632991; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0195026375147196e-41; time taken: 7654.27788901329
+
+process 2632999; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.812024249802593e-42; time taken: 7654.867498397827
+
+process 2632994; simulation completed. \#points per level: 200000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.785243439093047e-42; time taken: 7657.940905570984
+
+process 2633007; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3201742610786012e-41; time taken: 12176.58551645279
+
+process 2633010; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.816830662168974e-42; time taken: 12224.939110040665
+
+process 2633009; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.5200650732435179e-41; time taken: 12255.44222354889
+
+process 2633008; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.157756255375777e-41; time taken: 12291.731324911118
+
+process 2633005; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.633845277498118e-42; time taken: 12371.477514982224
+
+process 2633006; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 2.0435173399993353e-41; time taken: 12550.686032772064
+
+process 2633003; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0705106968888382e-41; time taken: 12554.24791932106
+
+process 2633004; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.55566989983413e-42; time taken: 12619.615278244019
+
+process 2632987; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.8461202880167427e-41; time taken: 10504.513737678528
+
+process 2633001; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.472453157818687e-42; time taken: 10545.114525794983
+
+process 2632992; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.361365124433394e-42; time taken: 10538.898920059204
+
+process 2632995; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.5791022916204e-42; time taken: 10714.583924770355
+
+process 2632988; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.6340313569414834e-41; time taken: 10728.819410800934
+
+process 2632996; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.082585789263305e-42; time taken: 10680.43048453331
+
+process 2632989; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.381189401569744e-42; time taken: 10715.870307207108
+
+process 2632998; simulation completed. \#points per level: 350000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.096215510207377e-42; time taken: 10818.265639543533
+
+process 2632990; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.369629471736733e-42; time taken: 14791.205644845963
+
+process 2632993; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.4209184219913797e-41; time taken: 15085.408063173294
+
+process 2632999; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.809724886403674e-42; time taken: 15088.094353199005
+
+process 2632994; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.510681401767283e-41; time taken: 15112.045081853867
+
+process 2632991; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.334579567417081e-41; time taken: 15197.314632177353
+
+process 2632997; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.115438483440619e-42; time taken: 15257.395640611649
+
+process 2633000; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.481972507035385e-42; time taken: 15323.047889471054
+
+process 2633002; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0852638068272769e-41; time taken: 15409.815992355347
+
+process 2633008; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.3474425810315797e-42; time taken: 14586.35420536995
+
+process 2633005; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.989047359611312e-42; time taken: 14598.558319807053
+
+process 2633007; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.733858631124772e-42; time taken: 14881.001948833466
+
+process 2633010; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.325977808795271e-41; time taken: 14929.981680393219
+
+process 2633009; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.303588926275295e-42; time taken: 15088.599787950516
+
+process 2633004; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.3184518832539427e-42; time taken: 14794.440066814423
+
+process 2633003; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.290686378339777e-42; time taken: 14918.78281378746
+
+process 2633006; simulation completed. \#points per level: 500000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.952740493853326e-42; time taken: 15066.56326341629
+
+process 2632987; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.1184752319987121e-41; time taken: 19138.97458934784
+
+process 2632998; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 9.836136460802548e-42; time taken: 18881.73415207863
+
+process 2633001; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.3633634843068408e-41; time taken: 19222.054912805557
+
+process 2632992; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.2958917853867583e-41; time taken: 19215.42476606369
+
+process 2632988; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0117144478456584e-41; time taken: 19159.176518201828
+
+process 2632989; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.329908247031698e-42; time taken: 19100.656701803207
+
+process 2632996; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 8.966244081332745e-42; time taken: 19173.95189023018
+
+process 2632995; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.916895127122097e-42; time taken: 19387.271354436874
+
+process 2632990; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0540705053804681e-41; time taken: 17862.674757242203
+
+process 2632997; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.167057192749963e-42; time taken: 17655.000831842422
+
+process 2632994; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 6.912320262951711e-42; time taken: 17771.868421554565
+
+process 2632993; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 1.0224780017319413e-41; time taken: 17869.809492111206
+
+process 2632999; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.628972992707296e-42; time taken: 17852.403398752213
+
+process 2632991; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 5.968352353088552e-42; time taken: 17777.49404835701
+
+process 2633000; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 7.798528970843471e-42; time taken: 17740.504262685776
+
+process 2633002; simulation completed. \#points per level: 750000;
+lambda: 10; beta: 10;
+quantile: 0.36787944117144233; evidence: 3.9116941265171085e-42; time taken: 17766.57486486435
+

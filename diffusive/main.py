@@ -30,6 +30,7 @@ def main():
     parser.add_argument('--search_lam', metavar='search_lam', type=bool, dest='search_lam', help='runs a search over several lambda values.')
     parser.add_argument('--search_beta', metavar='search_beta', type=bool, dest='search_beta', help='runs a search over several beta values.')
     parser.add_argument('--search_quantile', metavar='search_quantile', type=bool, dest='search_quantile', help='runs a search over several quantile values.')
+    parser.add_argument('--levels_plot', metavar='levels_plot', type=bool, dest='levels_plot', help='print plot of visited levels.')
     parser.set_defaults(max_level=100)
     parser.set_defaults(L_per_level=2000)
     parser.set_defaults(dim=50)
@@ -45,10 +46,11 @@ def main():
     parser.set_defaults(search_lam=False)
     parser.set_defaults(search_beta=False)
     parser.set_defaults(search_quantile=False)
+    parser.set_defaults(levels_plot=False)
     args = parser.parse_args()
 
-    over_L = (50, 75, 100, 200, 350, 500, 750,
-    1000, 2000, 3500, 5000, 7500, 10000, 20000, 35000, 50000, 75000, 100000)
+    over_L = (2000, 3500, 5000, 7500, 10000, 20000, 35000,
+                50000, 75000, 100000)
 
     over_lam = [1, 2, 5, 10, 25, 50, 75]
 
@@ -77,7 +79,8 @@ def main():
         args.dim,
         args.prior_range,
         params,
-        no_search) for i in range(args.n_runs)]
+        no_search,
+        args.levels_plot) for i in range(args.n_runs)]
 
     elif args.search_L_per_level:
         params = [
@@ -98,7 +101,8 @@ def main():
         args.dim,
         args.prior_range,
         param,
-        no_search) 
+        no_search,
+        args.levels_plot) 
         for param in params
         for i in range(args.n_runs)]
 
@@ -120,7 +124,8 @@ def main():
         args.dim,
         args.prior_range,
         param,
-        no_search) 
+        no_search,
+        args.levels_plot) 
         for param in params
         for i in range(args.n_runs)]
 
@@ -142,7 +147,8 @@ def main():
         args.dim,
         args.prior_range,
         param,
-        no_search) 
+        no_search,
+        args.levels_plot) 
         for param in params
         for i in range(args.n_runs)]
 
@@ -164,7 +170,8 @@ def main():
         args.dim,
         args.prior_range,
         param,
-        no_search) 
+        no_search,
+        args.levels_plot) 
         for param in params
         for i in range(args.n_runs)]
 
@@ -176,10 +183,12 @@ def main():
             print('forced termination.')
             exit()
     output_path = os.path.abspath('output')
+    out2 = None
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     if no_search:
         out = os.path.join(output_path, f'results.csv')
+        out2 = os.path.join(output_path, f'results_prior.csv')
     elif args.search_L_per_level:
         out = os.path.join(output_path, f'results_L_per_lev.csv')
     elif args.search_lam:
@@ -193,3 +202,10 @@ def main():
         writer.writerow(['max_level', 'L_per_level', 'levels_finished', 'lam', 'beta', 'quantile', 'evidence'])
         for result in final:
             writer.writerow([result.params.max_level, result.params.L_per_level, result.levels_finished, result.params.lam, result.params.beta, result.params.quantile, result.evidence[-1]])
+    if out2 != None:
+        with open(out2, 'w') as f:
+            writer = csv.writer(f, delimiter=',')
+            writer.writerow(['max_level', 'L_per_level', 'lam', 'beta', 'quantile'])
+            writer.writerow([final[0].params.max_level, final[0].params.L_per_level, final[0].params.lam, final[0].params.beta, final[0].params.quantile])
+            for i in range(final[0].params.max_level):
+                writer.writerow([i]+[result.relative_visits[i][1]/result.relative_visits[i][0] for result in final])

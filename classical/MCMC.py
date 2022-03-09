@@ -4,7 +4,7 @@ def proposal(x_t, len_step, dim):
     x_t1 = x_t + len_step*np.random.uniform(-1., 1., dim)
     return x_t1
 
-def MCMC(theta, likelihood, L_s, dim, len_step, n=100):
+def MCMC(theta, likelihood, L_s, dim, len_step, n=50):
     theta_new = theta
     i = 0
     while (i <= n) | (likelihood(theta_new) < L_s):

@@ -12,25 +12,28 @@ def parser():
 def reader(filename):
     n_points = [5, 10, 20, 35, 50, 75,
     100, 200, 350, 500, 750, 1000, 2000,
-    3500, 5000, 7500, 10000, 20000, 35000]
+    3500, 5000, 7500, 10000, 20000, 35000,
+    50000, 75000, 100000, 200000, 350000,
+    500000, 750000]
     Z_dict = {point: [] for point in n_points}
     folder = './output/'
     with open(folder+filename, 'r') as f:
-        start = 'points: '
-        start1 = 'evidence: '
+        start = 'points per level: '
+        start1 = 'time taken: '
         end = ';'
+        end1 = '\n'
         for i, line in enumerate(f):
             if i%4 == 0:
                 n = re.search(start+'(.*)'+end, line)
                 point = int(n.group(1))
             if i%4 == 2:
-                z = re.search(start1+'(.*)'+end, line)
-                evid = float(z.group(1))
-                Z_dict[point].append(evid)
+                z = re.search(start1+'(.*)'+end1, line)
+                tim = float(z.group(1))
+                Z_dict[point].append(tim)
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    out = os.path.join(output_path, f'results2.csv')
+    out = os.path.join(output_path, f'results_time.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         for point in n_points:

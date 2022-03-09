@@ -28,6 +28,19 @@ def par_encod(param):
     else:
         raise ValueError('ValueError: parameter not present in model.')
 
+def par_name_encod(param):
+    if param == 'L_per_level':
+        return 'initial points', 'n_p'
+    elif param == 'lambda':
+        return '$\lambda$', 'lam'
+    elif param == 'beta':
+        return '$\\beta$', 'b'
+    elif param == 'quantile':
+        return '$\\nu$', 'q'
+    else:
+        raise ValueError('ValueError: parameter not present in model.')
+
+
 def data_reader(filename, param, datalen=18):
     folder = './output/'
     f_in = open(folder+filename, 'r', newline='')
@@ -59,28 +72,48 @@ def power_law(x, a, b):
 
 def power_fit(dev, n_points):
     pars, covm = curve_fit(power_law, n_points, dev, (-0.5, 2))
-    return pars
+    return pars, covm
 
-def mean_var_plot(n_points, mean_list, var_list):
-    plt.errorbar(n_points, mean_list, var_list, marker='*', linestyle='-', color='black')
-    plt.axhline(y=-42+np.log10(7.25), color='red')
-    plt.title('Logarithmic evidence vs #initial points')
-    plt.xscale('log')
-    plt.xlabel('initial points')
-    plt.ylabel('log_{10}(Z)')
-    plt.savefig('logZ_vs_n_p.png')
-    plt.clf()
+def mean_var_plot(n_points, mean_list, var_list, param):
+    if par_encod(param) == 1:
+        plt.errorbar(n_points, mean_list, var_list, marker='*', linestyle='-', color='black')
+        plt.axhline(y=-42+np.log10(7.25), color='red')
+        plt.title('Logarithmic evidence vs '+par_name_encod(param)[0])
+        plt.xscale('log')
+        plt.xlabel(par_name_encod(param)[0])
+        plt.ylabel('$log_{10}$(Z)')
+        plt.savefig('logZ_vs_'+par_name_encod(param)[1]+'.png')
+        plt.clf()
 
-    pars = power_fit(np.log10(var_list**0.5), np.log10(n_points))
-    print(pars)
-    plt.plot(n_points, var_list**0.5, linestyle='', marker='x', color='red')
-    plt.plot(n_points, 10**pars[1]*n_points**pars[0], linestyle='-', color='black')
-    plt.xscale('log')
-    plt.yscale('log')
-    plt.title('Error on log_{10}(Z) vs \#initial points')
-    plt.xlabel('initial points')
-    plt.ylabel('\Delta log_{10}(Z)')
-    plt.savefig('d_logZ_n_p.png')
+        pars, covm = power_fit(np.log10(var_list**0.5), np.log10(n_points))
+        print(pars)
+        print(covm[0][0]**0.5, covm[1][1]**0.5, covm[0][1]/covm[0][0]**0.5/covm[1][1]**0.5)
+        plt.plot(n_points, var_list**0.5, linestyle='', marker='x', color='red')
+        plt.plot(n_points, 10**pars[1]*n_points**pars[0], linestyle='-', color='black')
+        plt.xscale('log')
+        plt.yscale('log')
+        plt.title('Error on $log_{10}$(Z) vs '+par_name_encod(param)[0])
+        plt.xlabel(par_name_encod(param)[0])
+        plt.ylabel('$\Delta$ $log_{10}$(Z)')
+        plt.savefig('d_logZ_n_p'+par_name_encod(param)[1]+'.png')
+    else:
+        plt.errorbar(n_points, mean_list, var_list, marker='*', linestyle='-', color='black')
+        plt.axhline(y=-42+np.log10(7.25), color='red')
+        plt.title('Logarithmic evidence vs '+par_name_encod(param)[0])
+        plt.xlabel(par_name_encod(param)[0])
+        plt.ylabel('$log_{10}$(Z)')
+        plt.savefig('logZ_vs_'+par_name_encod(param)[1]+'.png')
+        plt.clf()
+
+        #pars = power_fit(np.log10(var_list**0.5), np.log10(n_points))
+        #print(pars)
+        plt.plot(n_points, var_list**0.5, linestyle='', marker='x', color='red')
+        #plt.plot(n_points, 10**pars[1]*n_points**pars[0], linestyle='-', color='black')
+        plt.yscale('log')
+        plt.title('Error on $log_{10}$(Z) vs '+par_name_encod(param)[0])
+        plt.xlabel(par_name_encod(param)[0])
+        plt.ylabel('$\Delta$ $log_{10}$(Z)')
+        plt.savefig('d_logZ_'+par_name_encod(param)[1]+'.png')
 
 if __name__ == '__main__':
     args = parsing()
@@ -92,4 +125,4 @@ if __name__ == '__main__':
         var.append(mean_var(log10_data(data))[1])
     mean, var = np.array(mean), np.array(var)
     n_points = np.array(list(dataset.keys()))
-    mean_var_plot(n_points, mean, var)
+    mean_var_plot(n_points, mean, var, args.param)

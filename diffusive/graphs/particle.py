@@ -7,7 +7,6 @@ import csv
 import numpy as np
 from collections import namedtuple
 from types import SimpleNamespace
-import matplotlib.pyplot as plt
 
 from polar_init import polar_nd_init
 
@@ -92,13 +91,14 @@ class particle():
                     self.likelihood = L_prop
                     self.current -= 1
                     accept = True
+             #print(self.likelihood, self.L_levels[self.current])
 
     def create_level(self, new_level):
         start = time.time()
         i = 0
-        while i <= self.params.L_per_level:
+        while i <= self.params.L_per_level:#len(self._L_buffer)
             self.iter += 1
-            if self.iter//self.params.record_step > self.params.max_recorded_points:
+            if self.iter%self.params.record_step > self.params.max_recorded_points:
                 break
             self.MC_step()
             if self.likelihood >= self.L_levels[-1]:
@@ -138,7 +138,7 @@ class particle():
     def create_all_levels(self):
         while len(self.L_levels) <= self.params.max_level:
             self.create_level(len(self.L_levels)-1)
-            if self.iter//self.params.record_step > self.params.max_recorded_points:
+            if self.iter%self.params.record_step > self.params.max_recorded_points:
                 break
         self._level_visits_old = self.level_visits
         self._creating = False
@@ -187,15 +187,7 @@ class particle():
             self.evidence.append(self.evidence[-1] + like*self.prior_mass[-1])
             j += 1
 
-    def levels_plot(self):
-        it = [i for i in range(len(self.level_record))]
-        plt.plot(it, self.level_record, linestyle='-', color='black')
-        plt.title('Current level for each iteration')
-        plt.xlabel('iteration')
-        plt.ylabel('level')
-        plt.savefig(f'./graphs/levels_{self.params.L_per_level}_{self.params.L_per_level}_l{self.params.lam}b{self.params.beta}Q{self.params.quantile:.4f}.png')
-
-def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search, levels_plot):
+def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search):
     start = time.time()
     np.random.seed(seed)
     params = SimpleNamespace(**params)
@@ -203,16 +195,14 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search, levels
     part.create_all_levels()
     part.explore_levels()
     part.find_evidence()
-    if levels_plot:
-        part.levels_plot()
     print(f'process {os.getpid()}; simulation completed. \#points per level: {params.L_per_level};')
     print(f'lambda: {params.lam}; beta: {params.beta};')
     print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {time.time()-start}\n')
-    """
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile:.4f}.csv')
+    """
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['max_level', 'L_per_level', 'max_points', 'C1', 'lam', 'beta', 'quantile'])

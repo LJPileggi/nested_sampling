@@ -16,21 +16,23 @@ def reader(filename):
     Z_dict = {point: [] for point in n_points}
     folder = './output/'
     with open(folder+filename, 'r') as f:
-        start = 'points: '
-        start1 = 'evidence: '
+        start = 'points per level: '
+        start1 = 'time taken: '
         end = ';'
+        end1 = '\n'
         for i, line in enumerate(f):
             if i%4 == 0:
                 n = re.search(start+'(.*)'+end, line)
+                print(n, i)
                 point = int(n.group(1))
             if i%4 == 2:
-                z = re.search(start1+'(.*)'+end, line)
-                evid = float(z.group(1))
-                Z_dict[point].append(evid)
+                z = re.search(start1+'(.*)'+end1, line)
+                tim = float(z.group(1))
+                Z_dict[point].append(tim)
     output_path = os.path.abspath('output')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
-    out = os.path.join(output_path, f'results2.csv')
+    out = os.path.join(output_path, f'results_time.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         for point in n_points:
