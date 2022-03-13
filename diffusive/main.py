@@ -1,4 +1,3 @@
-import os
 import sys
 import csv
 import random
@@ -10,10 +9,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 from multiprocessing import Pool
-from datetime import datetime
 
 from .particle import gauss, diffusive_loop
 from .utilities.loop_params import loop_par
+from .utilities.file_encod import file_encod
 
 def main():
     parser = argparse.ArgumentParser(description='Diffusive nested sampling algorithm implementation.')
@@ -61,35 +60,7 @@ def main():
             pool.terminate()
             print('forced termination.')
             exit()
-    now = datetime.now()
-    date = str(datetime.date(now))
-    hour = str(datetime.time(now))
-    hour = hour[:2] + hour[3:5] + hour[6:8]
-    if no_search:
-        output_path = os.path.abspath('./output/diffusive/normal')
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        out = os.path.join(output_path, f'{date}_{hour}.csv')
-    elif args.search_L_per_level:
-        output_path = os.path.abspath('./output/diffusive/normal')
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        out = os.path.join(output_path, f'{date}_{hour}.csv')
-    elif args.search_lam:
-        output_path = os.path.abspath('./output/diffusive/lambda')
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        out = os.path.join(output_path, f'{date}_{hour}.csv')
-    elif args.search_beta:
-        output_path = os.path.abspath('./output/diffusive/beta')
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        out = os.path.join(output_path, f'{date}_{hour}.csv')
-    elif args.search_quantile:
-        output_path = os.path.abspath('./output/diffusive/quantile')
-        if not os.path.exists(output_path):
-            os.makedirs(output_path)
-        out = os.path.join(output_path, f'{date}_{hour}.csv')
+    out = file_encod(args, no_search)
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
         writer.writerow(['max_level', 'L_per_level', 'levels_finished', 'lam', 'beta', 'quantile', 'evidence', 'time taken', 'MC_step'])
