@@ -9,8 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 
-from polar_init import polar_nd_init
-from MCMC import MCMC
+from .utilities.polar_init import polar_nd_init
+from .utilities.MCMC import MCMC
+from .utilities.time_buffer import pipeline
 
 def gauss(point):
     r2 = (point*point).sum()
@@ -49,6 +50,7 @@ class nested():
         self.worst_L_series = [0.]
         self.worst_idx = 0
         self.worst_L = 0.
+        self.time = 0
 
     def find_worst(self):
         worst, L_w = 0, self.points[0].likelihood
@@ -90,6 +92,7 @@ class nested():
 def nested_loop(N_iter, seed, *args):
     np.random.seed(seed)
     init_time_start = time.time()
+    pipe = pipeline()
     trial = polar_nd_init(args[1], args[2])
     init_time = (time.time() - init_time_start)*args[0]
     if not args[-1]:
@@ -106,34 +109,27 @@ def nested_loop(N_iter, seed, *args):
         nest.find_worst()
         nest.update_quantities(i)
         nest.substitute_worst()
-        left = (time.time()-start)*(N_iter-i)
+        it = (time.time()-start)
+        pipe.update(it)
+        left = pipe.average()*(N_iter-i)
         if (i%100 == 0) & (not args[-1]):
             if left >= 3600.:
-                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//3600:.0f} h {left//60%60:.0f} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: {left//3600:.0f} h {left//60%60:.0f} m {left%60:.0f} s.')
             elif left >= 60.:
-                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left//60} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: {left//60} m {left%60:.0f} s.')
             else:
-                print(f'process {os.getpid()}; iteration n. {i}; expected time left: {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: {left%60:.1f} s.')
         i += 1
         #if 1. - nest.evidence[-2]/nest.evidence[-1] < 0.00001:
             #break
     #nest.final_step(i)
-    print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {time.time()-init_time_start}')
+    nest.time = time.time()-init_time_start
+    if nest.time >= 3600:
+        print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time//3600:.0f} h {nest.time//60%60:.0f} m {nest.time%60:.0f} s.')
+    elif nest.time >= 60:
+        print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time//60:.0f} m {nest.time%60:.0f} s.')
+    else:
+        print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time:.1f} s.')
     print(f'process {os.getpid()}; \#iterations: {len(nest.weights)}; last prior mass: {nest.prior_mass[-1]};')
     print(f'process {os.getpid()}; evidence: {nest.evidence[-1]}; last likelihood value: {nest.worst_L}.\n')
-    """
-    output_path = os.path.abspath('output')
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-    out = os.path.join(output_path, f'data_{seed}_{args[0]}_{N_iter}.csv')
-    with open(out, 'w') as f:
-        writer = csv.writer(f, delimiter=',')
-        writer.writerow(['n_iterations', 'n_points', 'stoch_prior', 'trapezoid'])
-        writer.writerow([N_iter, args[0], args[4], args[5]])
-        writer.writerow(['iteration', 'prior mass', 'worst L', 'evidence'])
-        j = 0
-        for x, y, z in zip(nest.prior_mass, nest.worst_L_series, nest.evidence):
-            writer.writerow([j, x, y, z])
-            j += 1
-    """
     return nest

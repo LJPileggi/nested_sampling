@@ -10,8 +10,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import time
 from multiprocessing import Pool
+from datetime import datetime
 
-from nested import nested_loop
+from .nested import nested_loop
 
 def main():
     parser = argparse.ArgumentParser(description='Classical Nested Sampling Algorithm.')
@@ -50,8 +51,8 @@ def main():
         args.automatised) for i in range(args.n_runs)]
     else:
         N_points = [5, 10, 20, 35, 50, 75, 100,
-        200, 350, 500, 750, 1000, 2000, 3500]#, 5000, 7500, 10000, 20000, 35000]#50000, 75000]
-        N_iter = list(1000*np.array(N_points))
+        200, 350, 500, 750, 1000, 2000, 3500, 5000, 7500, 10000, 20000]
+        N_iter = list(100*np.array(N_points))
         params = [(
         n_iter,
         args.seed+i,
@@ -71,22 +72,43 @@ def main():
             pool.terminate()
             print("forced termination")
             exit()
-    output_path = os.path.abspath('output')
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
+
+    now = datetime.now()
+    date = str(datetime.date(now))
+    hour = str(datetime.time(now))
+    hour = hour[:2] + hour[3:5] + hour[6:8]
     if args.automatised & args.X_stoch:
-        out = os.path.join(output_path, f'results_loop_X_stoch.csv')
+        output_path = os.path.abspath('./output/classical/'+f'X_stoch')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     elif args.automatised & args.trapezoid:
-        out = os.path.join(output_path, f'results_loop_trapezoid.csv')
+        output_path = os.path.abspath('./output/classical/'+f'trapezoid')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     elif args.automatised:
-        out = os.path.join(output_path, f'results_loop.csv')
+        output_path = os.path.abspath('./output/classical/'+f'normal')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     elif args.X_stoch:
-        out = os.path.join(output_path, f'results_X_stoch.csv')
+        output_path = os.path.abspath('./output/classical/'+f'X_stoch')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     elif args.trapezoid:
-        out = os.path.join(output_path, f'results_trapezoid.csv')
+        output_path = os.path.abspath('./output/classical/'+f'trapezoid')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     else:
-        out = os.path.join(output_path, f'results.csv')
+        output_path = os.path.abspath('./output/classical/'+f'normal')
+        if not os.path.exists(output_path):
+            os.makedirs(output_path)
+        out = os.path.join(output_path, f'{date}_{hour}.csv')
     with open(out, 'w') as f:
         writer = csv.writer(f, delimiter=',')
+        writer.writerow(['initial points', 'iterations', 'evidence', 'time', 'MC step'])
         for result in results:
-            writer.writerow([result.n_points, result.N_iter, result.evidence[-1]])
+            writer.writerow([result.n_points, result.N_iter, result.evidence[-1], result.time, args.MC_step])

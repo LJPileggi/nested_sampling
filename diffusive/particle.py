@@ -9,9 +9,8 @@ from collections import namedtuple
 from types import SimpleNamespace
 import matplotlib.pyplot as plt
 
-from polar_init import polar_nd_init
-
-#namedtuple() converts dict to obj
+from .utilities.polar_init import polar_nd_init
+from .utilities.time_buffer import pipeline
 
 def gauss(point):
     r2 = (point*point).sum()
@@ -36,6 +35,7 @@ class particle():
         self.prior_mass = []
         self.evidence = [0.]
         self.levels_finished = 0
+        self.time = 0
         self._dim = dim
         self._prior_range = prior_range
         self.params = params
@@ -95,6 +95,7 @@ class particle():
 
     def create_level(self, new_level):
         start = time.time()
+        pipe = pipeline()
         i = 0
         while i <= self.params.L_per_level:
             self.iter += 1
@@ -107,15 +108,14 @@ class particle():
             self.level_visits[self.current] += 1
             if new_level > 0:
                 if self.likelihood > self.L_levels[-1]:
-                    self.relative_visits[new_level-1][1] += 1#./self.weighting(new_level)
+                    self.relative_visits[new_level-1][1] += 1
                 elif self.likelihood > self.L_levels[-2]:
-                    self.relative_visits[new_level-1][0] += 1#./self.weighting(new_level-1)
+                    self.relative_visits[new_level-1][0] += 1
                 else:
                     pass
             if self.iter%self.params.record_step == 0:
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
-                #print(f'Creating level {new_level}; L_{new_level}: {self.L_levels[-1]}; currently at {self.likelihood}')
         self._L_buffer.sort()
         quant = floor(len(self._L_buffer)*(1-self.params.quantile))-1
         self.L_levels.append(self._L_buffer[quant])
@@ -125,14 +125,16 @@ class particle():
         self._L_buffer = self._L_buffer[quant:]
         #print(self._L_buffer)
         self.level_visits.append(1)
-        time_left = (time.time()-start)*(self.params.max_level-new_level)
+        it = (time.time()-start)
+        pipe.update(it)
+        time_left = pipe.average()*(self.params.max_level-new_level)
         if self._no_search:
             if time_left >= 3600.:
-                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
             elif time_left >= 60.:
-                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
+                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
             else:
-                print(f'process {os.getpid()}; created level {new_level}. Expected time to finish creating levels: {time_left:.1f} s.')
+                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left:.1f} s.')
 
 
     def create_all_levels(self):
@@ -146,6 +148,7 @@ class particle():
 
     def explore_levels(self):
         self.level_visits = list(np.ones(len(self.level_visits)))
+        pipe = pipeline()
         while True:
             start = time.time()
             self.iter += 1
@@ -157,14 +160,16 @@ class particle():
             if self.iter%self.params.record_step == 0:
                 self.L_record.append(self.likelihood)
                 self.level_record.append(self.current)
-                time_left = (time.time()-start)*(self.params.max_recorded_points*self.params.record_step - self.iter)
+                it = (time.time()-start)
+                pipe.update(it)
+                time_left = pipe.average()*(self.params.max_recorded_points*self.params.record_step - self.iter)
                 if (self.iter//self.params.record_step%100 == 0) & self._no_search:
                     if time_left >= 3600.:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left//60} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left//60:.0f} m {time_left%60:.0f} s.')
                     else:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
 
     def find_evidence(self):
@@ -203,24 +208,15 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search, levels
     part.create_all_levels()
     part.explore_levels()
     part.find_evidence()
+    part.time = time.time()-start
     if levels_plot:
         part.levels_plot()
     print(f'process {os.getpid()}; simulation completed. \#points per level: {params.L_per_level};')
     print(f'lambda: {params.lam}; beta: {params.beta};')
-    print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {time.time()-start}\n')
-    """
-    output_path = os.path.abspath('output')
-    if not os.path.exists(output_path):
-        os.makedirs(output_path)
-    out = os.path.join(output_path, f'data_{seed}_{params.max_level}_{params.L_per_level}_l{params.lam}b{params.beta}Q{params.quantile:.4f}.csv')
-    with open(out, 'w') as f:
-        writer = csv.writer(f, delimiter=',')
-        writer.writerow(['max_level', 'L_per_level', 'max_points', 'C1', 'lam', 'beta', 'quantile'])
-        writer.writerow([params.max_level, params.L_per_level, params.max_recorded_points, params.C1, params.lam, params.beta, params.quantile])
-        writer.writerow(['iteration', 'level', 'prior mass', 'likelihood', 'evidence'])
-        j = 0
-        for x, y, z, t in zip(part.level_record, part.prior_mass, part.L_record, part.evidence):
-            writer.writerow([j, x, y, z, t])
-            j += 1
-    """
+    if part.time >= 3600:
+        print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time//3600:.0f} h {part.time//60%60:.0f} m {part.time%60:.0f} s\n')
+    elif part.time >= 60:
+        print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time//60:.0f} m {part.time%60:.0f} s\n')
+    else:
+        print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time:.1f} s\n')
     return part
