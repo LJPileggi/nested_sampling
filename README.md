@@ -15,15 +15,18 @@ output files are stored in the ./output/ folder.
 
 ### Output files
 Output file for classical n. s.:
+'''
 initial points	iterations	evidence	time		Mc step
 100		10000		2.36548e-43	25.346		0.005
 ...		...		...		...		...
+'''
 
 output file for diffusive n. s.:
+'''
 max level	L per level	level finished	lam	beta	quantile	evidence	time taken	MC_step
 100		100		110		10	10	0.36788		4.562e-50	5.214		0.0025
 ...		...		...		...	...	...		...		...		...
-
+'''
 ### Analyse results of simulation
 Analyse a previously generated dataset through:
 '''
