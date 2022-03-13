@@ -8,14 +8,14 @@ Bayesian Analysis 4, pp. 833-860 (2006);
 
 ### Run a simulation
 See the list different flags through:
-'''
+
 $ python3 classical.py/diffusive.py --flag %%%
-'''
+
 output files are stored in the ./output/ folder.
 
 ### Analyse results of simulation
 Analyse a previously generated dataset through:
-'''
+
 $ python3 analysis.py --algorithm %%% --filename %%% --n_trials %%% --param %%%
-'''
+
 graph files are stored in the ./graphs/ folder
