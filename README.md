@@ -9,7 +9,7 @@ Bayesian Analysis 4, pp. 833-860 (2006);
 ### Run a simulation
 See the list different flags through:
 
-$ python3 classical.py/diffusive.py --flag %%%
+$ python3 classical.py _or_ diffusive.py --flag %%%
 
 output files are stored in the ./output/ folder.
 
