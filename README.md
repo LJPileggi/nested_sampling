@@ -4,6 +4,7 @@ This project provides a dummy implementation of the Classical Nested Sampling (J
 Papers:
 >[1] J. Skilling, Nested Sampling for General Bayesian Computation,
 Bayesian Analysis 4, pp. 833-860 (2006);
+
 >[2] B. J. Brewer, L. B. Pártay, G. Csányi, Diffusive Nested Sampling, https://arxiv.org/abs/0912.2380.
 
 ### Run a simulation
