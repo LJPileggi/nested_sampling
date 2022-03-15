@@ -20,14 +20,14 @@ def parsing():
 class encoding():
 
     def __init__(self, args):
-        if alg not in ('classical', 'diffusive'):
+        if args.algorithm not in ('classical', 'diffusive'):
             raise NotImplementedError('NotImplementedError: not yet implemented algorithm.')
-        elif (alg == 'classical') & (param not in ('normal', 'X_stoch', 'trapezoid', 'time')):
+        elif (args.algorithm == 'classical') & (args.param not in ('normal', 'X_stoch', 'trapezoid', 'time')):
             raise ValueError('ValueError: parameter not present in model.')
-        elif (alg == 'diffusive') & (param not in ('normal', 'lambda', 'beta', 'quantile', 'time')):
+        elif (args.algorithm == 'diffusive') & (args.param not in ('normal', 'lambda', 'beta', 'quantile', 'time')):
             raise ValueError('ValueError: parameter not present in model.')
         self._param = args.param
-        self._alg = args.alg
+        self._alg = args.algorithm
         self._filename = args.filename
         self._n_trials = args.n_trials
         if alg == 'classical':
