@@ -58,7 +58,7 @@ class encoding():
         self._data_reader()
 
     def _data_reader(self):
-        folder = './output/'+self._alg+'/'+self._param+'/'
+        folder = f'./output/{self._alg}/{self._param}/'
         f_in = open(folder+self._filename, 'r', newline='')
         reader = csv.reader(f_in, delimiter=',')
         data = {}
@@ -97,7 +97,7 @@ class encoding():
         self._n_points = np.array(list(self._data.keys()))
 
     def _file_encod(self):
-        graph_path = os.path.abspath('./graphs/'+self._alg+'/'+self._param)
+        graph_path = os.path.abspath(f'./graphs/{self._alg}/{self._param}')
         if not os.path.exists(graph_path):
             os.makedirs(graph_path)
         out = os.path.join(graph_path, f'{self._filename[:-4]}')
@@ -116,7 +116,7 @@ class encoding():
         self._mean_var()
         plt.errorbar(self._n_points, self._mean, self._var, marker='*', linestyle='-', color='black')
         plt.axhline(y=-42+np.log10(7.25), color='red')
-        plt.title('Logarithmic evidence vs '+self._par_name_encod)
+        plt.title(f'Logarithmic evidence vs {self._par_name_encod}')
         plt.xscale('log') if self._param not in ('beta', 'quantile') else None
         plt.yscale('log') if self._param == 'time' else None
         plt.xlabel(self._par_name_encod)
@@ -132,7 +132,7 @@ class encoding():
             plt.plot(self._n_points, 10**pars[1]*self._n_points**pars[0], linestyle='-', color='black')
             plt.xscale('log')
             plt.yscale('log')
-            plt.title('Error on $log_{10}$(Z) vs '+self._par_name_encod)
+            plt.title(f'Error on $log_{10}$(Z) vs {self._par_name_encod}')
             plt.xlabel(self._par_name_encod)
             plt.ylabel('$\Delta$ $log_{10}$(Z)')
             plt.savefig(self._file_encod()[1])
