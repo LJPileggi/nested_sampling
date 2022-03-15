@@ -24,7 +24,7 @@ def main():
     parser.add_argument('--trapezoid', dest='trapezoid', type=bool, help='sets new weight using trapezoidal rule;\ndefault: takes difference btw consecutive X values. Must be True or False.')
     parser.add_argument('--seed', metavar='seed', type=int, dest='seed', help='sets seed for simulation.')
     parser.add_argument('--n_runs', dest='n_runs', type=int, help='#parallel runs of the simulation;\ndefault: 12.')
-    parser.add_argument('--automatised', metavar='automatised', type=bool, dest='automatised', help='runs automatically the algorithm over several configurations of \#points. Must be True or False.')
+    parser.add_argument('--automatised', metavar='automatised', type=bool, dest='automatised', help='runs automatically the algorithm over several configurations of #points. Must be True or False.')
     parser.set_defaults(N_iter=20000)
     parser.set_defaults(n_points=100)
     parser.set_defaults(dim=50)
