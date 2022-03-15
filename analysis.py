@@ -19,17 +19,17 @@ def parsing():
 
 class encoding():
 
-    def __init__(self, param, alg, filename, n_trials):
+    def __init__(self, args):
         if alg not in ('classical', 'diffusive'):
             raise NotImplementedError('NotImplementedError: not yet implemented algorithm.')
         elif (alg == 'classical') & (param not in ('normal', 'X_stoch', 'trapezoid', 'time')):
             raise ValueError('ValueError: parameter not present in model.')
         elif (alg == 'diffusive') & (param not in ('normal', 'lambda', 'beta', 'quantile', 'time')):
             raise ValueError('ValueError: parameter not present in model.')
-        self._param = param
-        self._alg = alg
-        self._filename = filename
-        self._n_trials = n_trials
+        self._param = args.param
+        self._alg = args.alg
+        self._filename = args.filename
+        self._n_trials = args.n_trials
         if alg == 'classical':
             self._out_encod = 2
             if param in ('normal', 'X_stoch', 'trapezoid'):
@@ -139,5 +139,5 @@ class encoding():
 
 if __name__ == '__main__':
     args = parsing()
-    encod = encoding(args.param, args.algorithm, args.filename, args.n_trials)
+    encod = encoding(args)
     encod.mean_var_plot()
