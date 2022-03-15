@@ -198,7 +198,11 @@ class particle():
         plt.title('Current level for each iteration')
         plt.xlabel('iteration')
         plt.ylabel('level')
-        plt.savefig(f'./graphs/levels_{self.params.L_per_level}_{self.params.L_per_level}_l{self.params.lam}b{self.params.beta}Q{self.params.quantile:.4f}.png')
+        out_path = os.path.abspath('./graphs/levels/')
+        if not os.path.exists(out_path):
+            os.makedirs(out_path)
+        out = os.path.join(out_path, f'{self.params.L_per_level}_{self.params.L_per_level}_l{self.params.lam}b{self.params.beta}Q{self.params.quantile:.4f}.png')
+        plt.savefig(out)
 
 def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search, levels_plot):
     start = time.time()
