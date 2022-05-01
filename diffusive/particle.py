@@ -121,9 +121,7 @@ class particle():
         self.L_levels.append(self._L_buffer[quant])
         self.L_levels.sort()
         self.relative_visits.append([quant, len(self._L_buffer)*self.params.quantile])
-        #print(self._L_buffer)
         self._L_buffer = self._L_buffer[quant:]
-        #print(self._L_buffer)
         self.level_visits.append(1)
         it = (time.time()-start)
         pipe.update(it)
