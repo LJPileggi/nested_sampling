@@ -97,7 +97,8 @@ def nested_loop(N_iter, seed, *args):
     init_time = (time.time() - init_time_start)*args[0]
     if not args[-1]:
         if init_time >= 3600.:
-            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//3600:.0f} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
+            print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: '
+                  f'{init_time//3600:.0f} h {init_time//60%60:.0f} m {init_time%60:.0f} s.')
         elif init_time >= 60.:
             print(f'process {os.getpid()}; initialising particles. Expected time for initialisation: {init_time//60} m {init_time%60:.0f} s.')
         else:
@@ -114,7 +115,8 @@ def nested_loop(N_iter, seed, *args):
         left = pipe.average()*(N_iter-i)
         if (i%100 == 0) & (not args[-1]):
             if left >= 3600.:
-                print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: {left//3600:.0f} h {left//60%60:.0f} m {left%60:.0f} s.')
+                print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: '
+                      f'{left//3600:.0f} h {left//60%60:.0f} m {left%60:.0f} s.')
             elif left >= 60.:
                 print(f'process {os.getpid()}; iteration n. {i}, with worst L: {nest.worst_L_series[-1]}; expected time left: {left//60} m {left%60:.0f} s.')
             else:
@@ -125,7 +127,8 @@ def nested_loop(N_iter, seed, *args):
     #nest.final_step(i)
     nest.time = time.time()-init_time_start
     if nest.time >= 3600:
-        print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time//3600:.0f} h {nest.time//60%60:.0f} m {nest.time%60:.0f} s.')
+        print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time//3600:.0f} h '
+              f'{nest.time//60%60:.0f} m {nest.time%60:.0f} s.')
     elif nest.time >= 60:
         print(f'process {os.getpid()}; simulation completed. \#points: {args[0]}; time taken: {nest.time//60:.0f} m {nest.time%60:.0f} s.')
     else:
