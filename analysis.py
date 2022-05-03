@@ -11,7 +11,9 @@ def parsing():
     parser.add_argument('--algorithm', metavar='algorithm', dest='algorithm', help='chooses whose data to analyse.')
     parser.add_argument('--filename', metavar='filename', dest='filename', help='name of file to be analysed.')
     parser.add_argument('--n_trials', metavar='n_trials', type=int, dest='n_trials', help='\#trials on the same config.')
-    parser.add_argument('--param', metavar='param', type=str, dest='param', help='parameter on the x axis. Choose between \'X_stoch\', \'trapezoid\' and \'time\' for classical, \' lambda\', \'beta\', \'quantile\' and \'time\' for diffusive n. s., or leave blank.')
+    parser.add_argument('--param', metavar='param', type=str, dest='param', help='parameter on the x axis. Choose between '
+                        '\'X_stoch\', \'trapezoid\' and \'time\' for classical, \' lambda\', \'beta\', \'quantile\' and '
+                        '\'time\' for diffusive n. s., or leave blank.')
     parser.set_defaults(n_trials=18)
     parser.set_defaults(param='normal')
     args = parser.parse_args()
