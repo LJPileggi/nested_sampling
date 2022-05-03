@@ -8,7 +8,7 @@ Bayesian Analysis 4, pp. 833-860 (2006);
 >[2] B. J. Brewer, L. B. Pártay, G. Csányi, Diffusive Nested Sampling, https://arxiv.org/abs/0912.2380.
 
 ### Run a simulation
-See the list different flags through:
+See the list of different flags through:
 
 $ python3 classical.py _or_ diffusive.py -h
 
