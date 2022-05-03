@@ -128,9 +128,11 @@ class particle():
         time_left = pipe.average()*(self.params.max_level-new_level)
         if self._no_search:
             if time_left >= 3600.:
-                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: '
+                      f'{time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
             elif time_left >= 60.:
-                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left//60} m {time_left%60:.0f} s.')
+                print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: '
+                      f'{time_left//60} m {time_left%60:.0f} s.')
             else:
                 print(f'process {os.getpid()}; created level {new_level}, with L: {self.L_levels[-1]}. Expected time to finish creating levels: {time_left:.1f} s.')
 
@@ -163,11 +165,15 @@ class particle():
                 time_left = pipe.average()*(self.params.max_recorded_points*self.params.record_step - self.iter)
                 if (self.iter//self.params.record_step%100 == 0) & self._no_search:
                     if time_left >= 3600.:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left//3600:.0f} h {time_left//60%60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level '
+                              f'{self.current} with L: {self.likelihood}. Expected time to finish: {time_left//3600:.0f} h '
+                              f'{time_left//60%60:.0f} m {time_left%60:.0f} s.')
                     elif time_left >= 60.:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left//60:.0f} m {time_left%60:.0f} s.')
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level '
+                              f'{self.current} with L: {self.likelihood}. Expected time to finish: {time_left//60:.0f} m {time_left%60:.0f} s.')
                     else:
-                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level {self.current} with L: {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
+                        print(f'process {os.getpid()}; {self.iter//self.params.record_step:.0f}th value collected. Currently at level '
+                              f'{self.current} with L: {self.likelihood}. Expected time to finish: {time_left:.1f} s.')    
         self.level_visits += self._level_visits_old
 
     def find_evidence(self):
@@ -216,7 +222,8 @@ def diffusive_loop(seed, likelihood, dim, prior_range, params, no_search, levels
     print(f'process {os.getpid()}; simulation completed. \#points per level: {params.L_per_level};')
     print(f'lambda: {params.lam}; beta: {params.beta};')
     if part.time >= 3600:
-        print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time//3600:.0f} h {part.time//60%60:.0f} m {part.time%60:.0f} s\n')
+        print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time//3600:.0f} h '
+              f'{part.time//60%60:.0f} m {part.time%60:.0f} s\n')
     elif part.time >= 60:
         print(f'quantile: {params.quantile}; evidence: {part.evidence[-1]}; time taken: {part.time//60:.0f} m {part.time%60:.0f} s\n')
     else:
